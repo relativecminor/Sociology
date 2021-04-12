@@ -5,27 +5,38 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
 
-    public Animator animator;
+    public Animator dialogueAnimator;
+    public Animator policyAnimator;
+    public Canvas dialogueCanvas;
+    public Canvas policyCanvas;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        policyCanvas.enabled = false;
     }
 
     public void OpenBox()
     {
-        animator.SetBool("isOpen", true);
+        dialogueAnimator.SetBool("isOpen", true);
     }
 
     public void CloseBox()
     {
-        animator.SetBool("isOpen", false);
+        dialogueAnimator.SetBool("isOpen", false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenPolicy()
     {
-        
+        dialogueCanvas.enabled = false;
+        policyCanvas.enabled = true;
+        policyAnimator.SetBool("isOpen", true);
     }
+
+    public void ClosePolicy()
+    {
+        dialogueCanvas.enabled = true;
+        policyCanvas.enabled = false;
+        policyAnimator.SetBool("isOpen", false);
+    }
+
 }
