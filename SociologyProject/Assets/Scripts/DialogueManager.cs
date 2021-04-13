@@ -38,8 +38,11 @@ public class DialogueManager : MonoBehaviour
 
     public void NextText()
     {
-        currentTextTracker++;
-        OpenBox();
+        if (currentTextTracker != chapter1Dialogue.Length-1)
+        {
+            currentTextTracker++;
+            OpenBox();
+        }
     }
 
     public void OpenPolicy()
