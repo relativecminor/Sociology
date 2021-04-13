@@ -11,6 +11,17 @@ public class GameManager : MonoBehaviour
     public int money;
     private int morality;
 
+    private string[] policyTitle = new string[] {
+        "Free Lunch Program",
+        "Extended Bus Routes" };
+    private string[] policyDescription = new string[] {
+        "The government pays for free lunches for public schools",
+        "Bus routes have a longer reach to pick up kids living further from schools" };
+    private int[] policyCost = new int[] {
+        2000,
+        1500 };
+    private bool[] policyPurchased = new bool[] { false, false };
+
     private void Awake()
     {
         if (Instance == null)
