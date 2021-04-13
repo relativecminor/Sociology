@@ -62,4 +62,20 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void purchasePolicy(int policyNumber)
+    {
+        if (money >= policyCost[policyNumber])
+        {
+            ChangeMoney(policyCost[policyNumber] * -1);
+            policyPurchased[policyNumber] = true;
+            Debug.Log("Purchased Policy " + policyNumber);
+        }
+    }
+
+    public string getPolicyTitle(int policyNumber) { return policyTitle[policyNumber]; }
+    public string getPolicyDescription(int policyNumber) { return policyDescription[policyNumber]; }
+    public int getPolicyCost(int policyNumber) { return policyCost[policyNumber];  }
+    public bool getPolicyPurchased(int policyNumber) { return policyPurchased[policyNumber];  }
+
 }
