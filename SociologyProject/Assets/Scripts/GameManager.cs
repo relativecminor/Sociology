@@ -13,14 +13,25 @@ public class GameManager : MonoBehaviour
 
     private string[] policyTitle = new string[] {
         "Free Lunch Program",
-        "Extended Bus Routes" };
+        "Extended Bus Routes",
+        "Voucher System",
+        "4", "5", "6", "7", "8", "9"};
     private string[] policyDescription = new string[] {
         "The government pays for free lunches for public schools",
-        "Bus routes have a longer reach to pick up kids living further from schools" };
+        "Bus routes have a longer reach to pick up kids living further from schools",
+        "Allows public money to follow students to private schools",
+        "4", "5", "6", "7", "8", "9"};
     private int[] policyCost = new int[] {
         2000,
-        1500 };
-    private bool[] policyPurchased = new bool[] { false, false };
+        1500,
+        1200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0};
+    private bool[] policyPurchased = new bool[] { false, false, false, false, false, false, false, false, false };
 
     private void Awake()
     {
@@ -71,6 +82,8 @@ public class GameManager : MonoBehaviour
             policyPurchased[policyNumber] = true;
             Debug.Log("Purchased Policy " + policyNumber);
         }
+        //Debug.Log(policyNumber);
+
     }
 
     public string getPolicyTitle(int policyNumber) { return policyTitle[policyNumber]; }

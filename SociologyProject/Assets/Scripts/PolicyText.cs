@@ -25,6 +25,7 @@ public class PolicyText : MonoBehaviour
     public void PolicyClicked(int policyNumber)
     {
         StartDialogue(GameManager.Instance.getPolicyDescription(policyNumber));
+        Debug.Log("hey I know the Policy Number: " + policyNumber);
     }
 
     IEnumerator typeText(string text)
