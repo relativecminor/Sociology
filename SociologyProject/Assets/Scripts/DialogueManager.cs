@@ -15,12 +15,16 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
     public GameObject textBox;
 
+    public Canvas schoolPolicyCanvas;
+    //public Animator schoolPolicyAnimator;
+
     private string[] chapter1Dialogue = new string[5];
     private int currentTextTracker = 0;
 
     void Start()
     {
         policyCanvas.enabled = false;
+        schoolPolicyCanvas.enabled = false;
         chapter1Dialogue[0] = "Hello and Welcome to GAME NAME. You will be playing as the government and as the superintendent of a school. You will be makigng decisions that have a lot of impact.";
         chapter1Dialogue[1] = "Use the policy menu to discover policies that you can pass as the government. Be careful, you must have enough money to buy and inact the policy";
         chapter1Dialogue[2] = "Also be weary of its effect on students in the school system. Some policies can have devestating effects on the student population";
@@ -52,8 +56,17 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueCanvas.enabled = false;
         policyCanvas.enabled = true;
+        schoolPolicyCanvas.enabled = false;
         policyAnimator.SetBool("isOpen", true);
     }
+    public void openSchoolPolicy()
+    {
+        dialogueCanvas.enabled = false;
+        policyCanvas.enabled = false;
+        schoolPolicyCanvas.enabled = true;
+        //schoolPolicyAnimator.SetBool("isOpen", true);
+    }
+
 
     public void ClosePolicy()
     {

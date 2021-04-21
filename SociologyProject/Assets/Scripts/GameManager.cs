@@ -15,12 +15,34 @@ public class GameManager : MonoBehaviour
         "Free Lunch Program",
         "Extended Bus Routes",
         "Voucher System",
-        "4", "5", "6", "7", "8", "9"};
+        "4", "5", "6", "7", "8", "9",
+    // school policies 
+        "School Resource Officer (SRO)",
+        "Dress Code",
+        "Zero Tolerance Disciplin",
+        "Critical Conversation Space",
+        "IQ testing",
+        "6",
+        "7",
+        "8",
+        "9"
+    };
     private string[] policyDescription = new string[] {
         "The government pays for free lunches for public schools",
         "Bus routes have a longer reach to pick up kids living further from schools",
         "Allows public money to follow students to private schools",
-        "4", "5", "6", "7", "8", "9"};
+        "4", "5", "6", "7", "8", "9",
+    // school policies 
+     "Give your school a School Resource Officer (SRO)",
+        "Enact a dress code policy",
+        "Create a zero tolerance disoplinary policy",
+        "Create Critical Conversation Spaces for students",
+        "Use IQ testing to select kids for gift education services",
+        "6",
+        "7",
+        "8",
+        "9"
+    };
     private int[] policyCost = new int[] {
         2000,
         1500,
@@ -30,9 +52,20 @@ public class GameManager : MonoBehaviour
         0,
         0,
         0,
+        0,
+        //school policies
+        2000,
+        1500,
+        1200,
+        0,
+        0,
+        0,
+        0,
+        0,
         0};
-    private bool[] policyPurchased = new bool[] { false, false, false, false, false, false, false, false, false };
+    private bool[] policyPurchased = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
 
+   
     private void Awake()
     {
         if (Instance == null)
@@ -91,4 +124,5 @@ public class GameManager : MonoBehaviour
     public int getPolicyCost(int policyNumber) { return policyCost[policyNumber];  }
     public bool getPolicyPurchased(int policyNumber) { return policyPurchased[policyNumber];  }
 
+    
 }
