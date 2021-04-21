@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 78097482468a0af45b942383bccdbf1b
   - enabled: 1
+    path: Assets/Scenes/Olivia Test Scene.unity
+    guid: 4a1a5508f07780848b719775ab168362
+  - enabled: 1
     path: Assets/Scenes/CameronTest.unity
     guid: cc7d82b9c9f390c4eb5fbec47fb5495f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

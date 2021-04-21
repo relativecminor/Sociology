@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(string text)
     {
-        StopAllCoroutines();
+        StopCoroutine(dialogueCo);
         dialogueCo = StartCoroutine(typeText(text));
     }
 

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject moneyTextBox;
     public int money;
     private int morality;
+    private int openPolicy;
 
     private string[] policyTitle = new string[] {
         "Free Lunch Program",
@@ -107,16 +108,19 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void purchasePolicy(int policyNumber)
+    public void purchasePolicy()
     {
-        if (money >= policyCost[policyNumber])
+        if (money >= policyCost[openPolicy])
         {
-            ChangeMoney(policyCost[policyNumber] * -1);
-            policyPurchased[policyNumber] = true;
-            Debug.Log("Purchased Policy " + policyNumber);
+            ChangeMoney(policyCost[openPolicy] * -1);
+            policyPurchased[openPolicy] = true;
+            Debug.Log("Purchased Policy " + openPolicy);
         }
-        //Debug.Log(policyNumber);
+    }
 
+    public void activePolicy(int policyNumber)
+    {
+        openPolicy = policyNumber;
     }
 
     public string getPolicyTitle(int policyNumber) { return policyTitle[policyNumber]; }

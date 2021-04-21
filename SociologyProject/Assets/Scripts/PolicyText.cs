@@ -39,8 +39,8 @@ public class PolicyText : MonoBehaviour
     }
 
     public void StartDialogue(string text)
-    {
-        StopAllCoroutines();
+    {;
+        GameManager.Instance.StopAllCoroutines();
         dialogueCo = StartCoroutine(typeText(text));
     }
 
