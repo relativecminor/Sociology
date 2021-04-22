@@ -18,6 +18,11 @@ public class DialogueManager : MonoBehaviour
     public Canvas schoolPolicyCanvas;
     //public Animator schoolPolicyAnimator;
 
+    public Canvas cutScene;
+    public GameObject cutSceneDialogue;
+    private string[] cutSceneText = new string[2];
+    private int cutSceneTextTracker = 0;
+
     private string[] chapter1Dialogue = new string[5];
     private int currentTextTracker = 0;
 
@@ -25,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     {
         policyCanvas.enabled = false;
         schoolPolicyCanvas.enabled = false;
+        cutScene.enabled = false;
         chapter1Dialogue[0] = "Hello and Welcome to GAME NAME. You will be playing as the government and as the superintendent of a school. You will be makigng decisions that have a lot of impact.";
         chapter1Dialogue[1] = "Use the policy menu to discover policies that you can pass as the government. Be careful, you must have enough money to buy and inact the policy";
         chapter1Dialogue[2] = "Also be weary of its effect on students in the school system. Some policies can have devestating effects on the student population";
@@ -36,6 +42,12 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueAnimator.SetBool("isOpen", true);
         StartDialogue(chapter1Dialogue[currentTextTracker]);
+    }
+
+    public void openboxcutscene()
+    {
+        dialogueAnimator.SetBool("isOpen", true);
+        StartDialogue(cutSceneText[cutSceneTextTracker]);
     }
 
     public void CloseBox()
@@ -52,11 +64,21 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void NextTextcutscene()
+    {
+        if (cutSceneTextTracker != cutSceneText.Length - 1)
+        {
+            cutSceneTextTracker++;
+            openboxcutscene();
+        }
+    }
+
     public void OpenPolicy()
     {
         dialogueCanvas.enabled = false;
         policyCanvas.enabled = true;
         schoolPolicyCanvas.enabled = false;
+        cutScene.enabled = false;
         policyAnimator.SetBool("isOpen", true);
     }
     public void openSchoolPolicy()
@@ -64,7 +86,20 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.enabled = false;
         policyCanvas.enabled = false;
         schoolPolicyCanvas.enabled = true;
+        cutScene.enabled = false;
         //schoolPolicyAnimator.SetBool("isOpen", true);
+    }
+
+    public void openCutScene()
+    {
+        dialogueCanvas.enabled = false;
+        policyCanvas.enabled = false;
+        schoolPolicyCanvas.enabled = false;
+        cutScene.enabled = true;
+        cutSceneText[0] = "Hey you guys";
+        cutSceneText[1] = "Thought I would give you an update";
+        policyAnimator.SetBool("isOpen", true);
+
     }
 
 
@@ -72,6 +107,8 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueCanvas.enabled = true;
         policyCanvas.enabled = false;
+        schoolPolicyCanvas.enabled = false;
+        cutScene.enabled = false;
         policyAnimator.SetBool("isOpen", false);
     }
 
