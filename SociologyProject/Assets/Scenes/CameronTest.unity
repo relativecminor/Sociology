@@ -1499,6 +1499,9 @@ MonoBehaviour:
   policyCanvas: {fileID: 1092505755}
   dialogueBox: {fileID: 575704383}
   textBox: {fileID: 429645034}
+  schoolPolicyCanvas: {fileID: 1092505755}
+  cutScene: {fileID: 0}
+  cutSceneDialogue: {fileID: 0}
 --- !u!4 &507714467
 Transform:
   m_ObjectHideFlags: 0
