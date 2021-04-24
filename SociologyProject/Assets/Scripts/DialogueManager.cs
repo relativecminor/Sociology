@@ -5,7 +5,8 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-
+    public Canvas mainMenu;
+    
     public Animator dialogueAnimator;
     public Animator policyAnimator;
     public Canvas dialogueCanvas;
@@ -28,9 +29,18 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        mainMenu.enabled = true;
         policyCanvas.enabled = false;
+        dialogueCanvas.enabled = false;
         schoolPolicyCanvas.enabled = false;
         cutScene.enabled = false;
+        
+    }
+
+    public void playGame()
+    {
+        dialogueCanvas.enabled = true;
+        mainMenu.enabled = false; 
         chapter1Dialogue[0] = "Hello and Welcome to GAME NAME. You will be playing as the government and as the superintendent of a school. You will be makigng decisions that have a lot of impact.";
         chapter1Dialogue[1] = "Use the policy menu to discover policies that you can pass as the government. Be careful, you must have enough money to buy and inact the policy";
         chapter1Dialogue[2] = "Also be weary of its effect on students in the school system. Some policies can have devestating effects on the student population";
@@ -38,6 +48,14 @@ public class DialogueManager : MonoBehaviour
         chapter1Dialogue[4] = "As the education coordinator for your district the selection falls on your hands, and there are a couple factors to consider";
     }
 
+    public void pauseGame()
+    {
+        mainMenu.enabled = true;
+        policyCanvas.enabled = false;
+        dialogueCanvas.enabled = false;
+        schoolPolicyCanvas.enabled = false;
+        cutScene.enabled = false;
+    }
     public void OpenBox()
     {
         dialogueAnimator.SetBool("isOpen", true);
