@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
     public bool getPolicyPurchased(int policyNumber) { return policyPurchased[policyNumber];  }
 
 
-    IEnumerator LoadYourAsyncScene(string scene)
+    public IEnumerator LoadYourAsyncScene(string scene)
     {
         // The Application loads the Scene in the background as the current Scene runs.
         // This is particularly good for creating loading screens.
@@ -145,13 +145,5 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Play()
-    {
-        StartCoroutine(LoadYourAsyncScene("Tutorial"));
-    }
-
-    public void Menu()
-    {
-        StartCoroutine(LoadYourAsyncScene("MainMenu"));
-    }
+    
 }
