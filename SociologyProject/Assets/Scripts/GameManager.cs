@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     private int morality;
     private int openPolicy;
 
+    public GameObject dialogueManager;
+    public GameObject events;
+
     private string[] policyTitle = new string[] {
         "Free Lunch Program",
         "Extended Bus Routes",
@@ -73,10 +76,14 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(Instance);
+            DontDestroyOnLoad(dialogueManager);
+            DontDestroyOnLoad(events);
         }
         else
         {
             Destroy(gameObject);
+            Destroy(dialogueManager);
+            Destroy(events);
         }
     }
     // Start is called before the first frame update
