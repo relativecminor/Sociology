@@ -9,12 +9,16 @@ public class DialogueManager : MonoBehaviour
     
     public Animator dialogueAnimator;
     public Animator policyAnimator;
-    public Canvas dialogueCanvas;
     public Canvas policyCanvas;
-
-    private Coroutine dialogueCo;
+    public Canvas dialogueCanvas;
+    
+    public GameObject dialogueSide;
+    public GameObject choiceSide;
     public GameObject dialogueBox;
     public GameObject textBox;
+
+    private Coroutine dialogueCo;
+
 
     public Canvas schoolPolicyCanvas;
     //public Animator schoolPolicyAnimator;
@@ -24,17 +28,32 @@ public class DialogueManager : MonoBehaviour
     private string[] cutSceneText = new string[2];
     private int cutSceneTextTracker = 0;
 
-    private string[] chapter1Dialogue = new string[5];
+    public string[] chapter1Dialogue = new string[8];
     private int currentTextTracker = 0;
 
     void Start()
     {
         mainMenu.enabled = true;
         policyCanvas.enabled = false;
-        dialogueCanvas.enabled = false;
+        dialogueCanvas.enabled = true;
         schoolPolicyCanvas.enabled = false;
         cutScene.enabled = false;
         
+    }
+    private void Update()
+    {
+        if (GameManager.Instance.choiceA == true)
+        {
+            chapter1Dialogue[6] = "You just chose option A.";
+        }
+    }   
+
+    private void FixedUpdate()
+    {
+        if (GameManager.Instance.choiceA == true)
+        {
+            chapter1Dialogue[6] = "You just chose option A.";
+        }
     }
 
     public void playGame()
@@ -46,6 +65,8 @@ public class DialogueManager : MonoBehaviour
         chapter1Dialogue[2] = "Also be weary of its effect on students in the school system. Some policies can have devestating effects on the student population";
         chapter1Dialogue[3] = "As the school year draws to a close and the weather is getting warmer, it's time for School High to select the teacher training programs for the summer.";
         chapter1Dialogue[4] = "As the education coordinator for your district the selection falls on your hands, and there are a couple factors to consider";
+        chapter1Dialogue[5] = "Now you have a choice: A or B";
+        chapter1Dialogue[7] = "I hope I guessed right.";
     }
 
     public void pauseGame()
@@ -77,9 +98,21 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentTextTracker != chapter1Dialogue.Length-1)
         {
+            
+            if(currentTextTracker == 5)
+            {
+                choiceSide.SetActive(true);
+                dialogueSide.SetActive(false);
+            }
             currentTextTracker++;
             OpenBox();
+            Debug.Log(currentTextTracker);
         }
+    }
+
+    public void testButton2()
+    {
+        Debug.Log(chapter1Dialogue[6]);
     }
 
     public void NextTextcutscene()

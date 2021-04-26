@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public GameObject dialogueManager;
     public GameObject events;
 
+    public bool choiceA = false;
+
     private string[] policyTitle = new string[] {
         "Free Lunch Program",
         "Extended Bus Routes",
@@ -129,6 +131,14 @@ public class GameManager : MonoBehaviour
     {
         openPolicy = policyNumber;
     }
+    public void testButton()
+    {
+        choiceA = true;
+    }
+    //public void testButton2()
+    //{
+    //    Debug.Log(choiceA);
+   // }
 
     public string getPolicyTitle(int policyNumber) { return policyTitle[policyNumber]; }
     public string getPolicyDescription(int policyNumber) { return policyDescription[policyNumber]; }
