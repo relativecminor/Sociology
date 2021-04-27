@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc1887574abc9b48950ba711beb52f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 760935871}
+  mainMenu: {fileID: 973809331}
   dialogueAnimator: {fileID: 594006681}
   policyAnimator: {fileID: 1485850603}
   policyCanvas: {fileID: 967311833}
