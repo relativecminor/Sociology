@@ -33,6 +33,8 @@ public class DialogueManager : MonoBehaviour
     public int[] choiceTextNumbers = new int[9];
     private int currentTextTracker = 0;
 
+    private int counter;
+
 
     void Start()
     {
@@ -42,6 +44,13 @@ public class DialogueManager : MonoBehaviour
         schoolPolicyCanvas.enabled = false;
         cutScene.enabled = false;
         choiceTextNumbers[0] = 5;
+    
+        GameManager.Instance.chapteronebackground.SetActive(false);
+        GameManager.Instance.chaptertwobackground.SetActive(false);
+        GameManager.Instance.chapterthreebackground.SetActive(false);
+        GameManager.Instance.chapterfourbackground.SetActive(false);
+        GameManager.Instance.endscreen.SetActive(false);
+  
     }
     private void Update()
     {
@@ -250,6 +259,35 @@ public class DialogueManager : MonoBehaviour
         schoolPolicyCanvas.enabled = false;
         cutScene.enabled = false;
         policyAnimator.SetBool("isOpen", false);
+
+        counter++;
+        if (counter == 1)
+        {
+            GameManager.Instance.chap1 = true;
+            Debug.Log(counter);
+        }
+        if (counter == 2)
+        {
+            GameManager.Instance.chap1done = true;
+            Debug.Log(counter);
+        }
+        if (counter == 3)
+        {
+            GameManager.Instance.chap2done = true;
+            Debug.Log(counter);
+        }
+        if (counter == 4)
+        {
+            GameManager.Instance.chap3done = true;
+            Debug.Log(counter);
+        }
+        if (counter == 5)
+        {
+            GameManager.Instance.chap4done = true;
+            Debug.Log(counter);
+        }
+        GameManager.Instance.nextchapter();
+
 
     }
 
