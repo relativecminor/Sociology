@@ -26,6 +26,29 @@ public class GameManager : MonoBehaviour
     public bool choiceI = false;
     public bool choiceJ = false;
 
+
+    public GameObject chapteronebackground;
+    public GameObject chaptertwobackground;
+    public GameObject chapterthreebackground;
+    public GameObject chapterfourbackground;
+    public GameObject endscreen;
+    public GameObject schoolbackground;
+
+    private bool chap1done;
+    private bool chap2done;
+    private bool chap3done;
+    private bool chap4done;
+    private int counter;
+
+    /**
+     * should be in start menu in dialogue manager
+     * chapteronebackground.SetActive(false);
+        chaptertwobackground.SetActive(false);
+        chapterthreebackground.SetActive(false);
+        chapterfourbackground.SetActive(false);
+        endscreen.SetActive(false);
+    **/
+
     private string[] policyTitle = new string[] {
         "Free Lunch Program",
         "Extended Bus Routes",
@@ -177,5 +200,35 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+
+
+public void nextchapter()
+{
+    if (chap1done)
+    {
+        chapteronebackground.SetActive(false);
+        chaptertwobackground.SetActive(true);
+        schoolbackground.SetActive(false);
+        Debug.Log("chapter1");
+    }
+    if (chap2done)
+    {
+        chaptertwobackground.SetActive(false);
+        chapterthreebackground.SetActive(true);
+        turnoffeverything();
+    }
+    if (chap3done)
+    {
+        chapterthreebackground.SetActive(false);
+        chapterfourbackground.SetActive(true);
+        turnoffeverything();
+    }
+    if (chap4done)
+    {
+        chapterfourbackground.SetActive(false);
+        endscreen.SetActive(true);
+        turnoffeverything();
+    }
+}
+
 }

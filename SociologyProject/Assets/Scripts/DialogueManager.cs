@@ -6,12 +6,12 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public Canvas mainMenu;
-    
+
     public Animator dialogueAnimator;
     public Animator policyAnimator;
     public Canvas policyCanvas;
     public Canvas dialogueCanvas;
-    
+
     public GameObject dialogueSide;
     public GameObject choiceSide;
     public GameObject dialogueBox;
@@ -32,6 +32,7 @@ public class DialogueManager : MonoBehaviour
     public int[] choiceTextNumbers = new int[9];
     private int currentTextTracker = 0;
 
+
     void Start()
     {
         mainMenu.enabled = true;
@@ -51,12 +52,12 @@ public class DialogueManager : MonoBehaviour
         {
             chapter1Dialogue[6] = "You just chose option B";
         }
-    }   
+    }
 
     public void playGame()
     {
         dialogueCanvas.enabled = true;
-        mainMenu.enabled = false; 
+        mainMenu.enabled = false;
         chapter1Dialogue[0] = "Hello and Welcome to GAME NAME. You will be playing as the government and as the superintendent of a school. You will be makigng decisions that have a lot of impact.";
         chapter1Dialogue[1] = "Use the policy menu to discover policies that you can pass as the government. Be careful, you must have enough money to buy and inact the policy";
         chapter1Dialogue[2] = "Also be weary of its effect on students in the school system. Some policies can have devestating effects on the student population";
@@ -94,10 +95,10 @@ public class DialogueManager : MonoBehaviour
 
     public void NextText()
     {
-        if (currentTextTracker != chapter1Dialogue.Length-1)
+        if (currentTextTracker != chapter1Dialogue.Length - 1)
         {
-            
-            if(currentTextTracker == 5)
+
+            if (currentTextTracker == 5)
             {
                 choiceSide.SetActive(true);
                 dialogueSide.SetActive(false);
@@ -158,12 +159,14 @@ public class DialogueManager : MonoBehaviour
         schoolPolicyCanvas.enabled = false;
         cutScene.enabled = false;
         policyAnimator.SetBool("isOpen", false);
+
     }
 
     public void StartDialogue(string text)
     {
-        if (dialogueCo != null) {
-           StopCoroutine(dialogueCo);
+        if (dialogueCo != null)
+        {
+            StopCoroutine(dialogueCo);
         }
         dialogueCo = StartCoroutine(typeText(text));
     }
@@ -181,6 +184,7 @@ public class DialogueManager : MonoBehaviour
             textBox.GetComponent<TextMeshProUGUI>().text += c;
             yield return new WaitForSeconds(.03f);
         }
+
     }
 
     public void optionA()
