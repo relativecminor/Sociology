@@ -829,13 +829,24 @@ MonoBehaviour:
   mainMenu: {fileID: 59702948}
   dialogueAnimator: {fileID: 1924683803}
   policyAnimator: {fileID: 438041040}
-  dialogueCanvas: {fileID: 644782275}
   policyCanvas: {fileID: 268838072}
+  dialogueCanvas: {fileID: 644782275}
+  dialogueSide: {fileID: 0}
+  choiceSide: {fileID: 0}
   dialogueBox: {fileID: 151527820}
   textBox: {fileID: 1793363367}
   schoolPolicyCanvas: {fileID: 268838072}
   cutScene: {fileID: 1181321234}
   cutSceneDialogue: {fileID: 271565296}
+  chapter1Dialogue:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
 --- !u!4 &341319262
 Transform:
   m_ObjectHideFlags: 0
@@ -1150,6 +1161,7 @@ MonoBehaviour:
   money: 0
   dialogueManager: {fileID: 341319260}
   events: {fileID: 1815385911}
+  choiceA: 0
 --- !u!4 &372117700
 Transform:
   m_ObjectHideFlags: 0
