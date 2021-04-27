@@ -216,38 +216,20 @@ public void nextchapter()
     {
         chaptertwobackground.SetActive(false);
         chapterthreebackground.SetActive(true);
-<<<<<<< Updated upstream
         
-=======
-            Debug.Log("chapter3 is here");
-       
->>>>>>> Stashed changes
     }
     if (chap3done)
     {
         chapterthreebackground.SetActive(false);
         chapterfourbackground.SetActive(true);
-<<<<<<< Updated upstream
         
     }
-=======
-            Debug.Log("chapter4 is here");
-
-        }
->>>>>>> Stashed changes
     if (chap4done)
     {
         chapterfourbackground.SetActive(false);
         endscreen.SetActive(true);
-<<<<<<< Updated upstream
         
     }
-=======
-            dialoguecanvas.enabled = false;
-        Debug.Log("endscreen is here");
-
-        }
->>>>>>> Stashed changes
 }
 
 }
