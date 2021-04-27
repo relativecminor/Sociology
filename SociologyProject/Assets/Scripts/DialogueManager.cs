@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     private int cutSceneTextTracker = 0;
 
     public string[] chapter1Dialogue = new string[8];
+    public int[] choiceTextNumbers = new int[9];
     private int currentTextTracker = 0;
 
     void Start()
@@ -38,14 +39,17 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.enabled = true;
         schoolPolicyCanvas.enabled = false;
         cutScene.enabled = false;
-        
+        choiceTextNumbers[0] = 5;
     }
     private void Update()
     {
-        if (GameManager.Instance.choiceA == true)
+        if (GameManager.Instance.choiceA)
         {
             chapter1Dialogue[6] = "You just chose option A.";
             chapter1Dialogue[7] = "Option A path";
+        } else if (GameManager.Instance.choiceB)
+        {
+            chapter1Dialogue[6] = "You just chose option B";
         }
     }   
 
@@ -122,7 +126,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueCanvas.enabled = false;
         policyCanvas.enabled = true;
-        //schoolPolicyCanvas.enabled = false;
         cutScene.enabled = false;
         policyAnimator.SetBool("isOpen", true);
     }
@@ -180,5 +183,19 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void optionA()
+    {
+        if(currentTextTracker == 6)
+        {
+            GameManager.Instance.choiceA = true;
+        }
+    }
+    public void optionB()
+    {
+        if(currentTextTracker == 6)
+        {
+            GameManager.Instance.choiceB = true;
+        }
+    }
 
 }

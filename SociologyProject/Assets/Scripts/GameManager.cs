@@ -16,6 +16,15 @@ public class GameManager : MonoBehaviour
     public GameObject events;
 
     public bool choiceA = false;
+    public bool choiceB = false;
+    public bool choiceC = false;
+    public bool choiceD = false;
+    public bool choiceE = false;
+    public bool choiceF = false;
+    public bool choiceG = false;
+    public bool choiceH = false;
+    public bool choiceI = false;
+    public bool choiceJ = false;
 
     private string[] policyTitle = new string[] {
         "Free Lunch Program",
@@ -140,10 +149,6 @@ public class GameManager : MonoBehaviour
     public void activePolicy(int policyNumber)
     {
         openPolicy = policyNumber;
-    }
-    public void testButton()
-    {
-        choiceA = true;
     }
     //public void testButton2()
     //{
