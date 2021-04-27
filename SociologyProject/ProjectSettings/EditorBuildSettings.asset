@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
-    guid: 78097482468a0af45b942383bccdbf1b
-  - enabled: 1
-    path: Assets/Scenes/Olivia Test Scene.unity
-    guid: 4a1a5508f07780848b719775ab168362
-  - enabled: 1
-    path: Assets/Scenes/CameronTest.unity
-    guid: cc7d82b9c9f390c4eb5fbec47fb5495f
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Playthrough/MainMenu.unity
+    guid: 60b9947cf4f8741ca9ca3788693cd68f
   - enabled: 1
     path: Assets/Scenes/Playthrough/Tutorial.unity
     guid: 791a85733a41a4937965a8a8f9c8d477
-  - enabled: 1
-    path: Assets/Scenes/Playthrough/MainMenu.unity
-    guid: 60b9947cf4f8741ca9ca3788693cd68f
+  - enabled: 0
+    path: Assets/Scenes/Main Menu.unity
+    guid: 78097482468a0af45b942383bccdbf1b
+  - enabled: 0
+    path: Assets/Scenes/Olivia Test Scene.unity
+    guid: 4a1a5508f07780848b719775ab168362
+  - enabled: 0
+    path: Assets/Scenes/CameronTest.unity
+    guid: cc7d82b9c9f390c4eb5fbec47fb5495f
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
