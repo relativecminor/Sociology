@@ -66,6 +66,7 @@ public class DialogueManager : MonoBehaviour
         chapter1Dialogue[3] = "As the school year draws to a close and the weather is getting warmer, it's time for School High to select the teacher training programs for the summer.";
         chapter1Dialogue[4] = "As the education coordinator for your district the selection falls on your hands, and there are a couple factors to consider";
         chapter1Dialogue[5] = "Now you have a choice: A or B";
+        chapter1Dialogue[6] = "You did not choose option A.";
         chapter1Dialogue[7] = "I hope I guessed right.";
     }
 
