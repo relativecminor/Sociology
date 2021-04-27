@@ -34,20 +34,15 @@ public class GameManager : MonoBehaviour
     public GameObject endscreen;
     public GameObject schoolbackground;
 
-    private bool chap1done;
-    private bool chap2done;
-    private bool chap3done;
-    private bool chap4done;
-    private int counter;
+    public bool chap1;
+    public bool chap1done;
+    public bool chap2done;
+    public bool chap3done;
+    public bool chap4done;
 
-    /**
-     * should be in start menu in dialogue manager
-     * chapteronebackground.SetActive(false);
-        chaptertwobackground.SetActive(false);
-        chapterthreebackground.SetActive(false);
-        chapterfourbackground.SetActive(false);
-        endscreen.SetActive(false);
-    **/
+    public Canvas dialoguecanvas;
+    public Canvas canvas;
+  
 
     private string[] policyTitle = new string[] {
         "Free Lunch Program",
@@ -204,31 +199,55 @@ public class GameManager : MonoBehaviour
 
 public void nextchapter()
 {
+    if (chap1)
+        { chapteronebackground.SetActive(true);
+            Debug.Log("chap1 is here");
+        }
     if (chap1done)
     {
         chapteronebackground.SetActive(false);
         chaptertwobackground.SetActive(true);
         schoolbackground.SetActive(false);
-        Debug.Log("chapter1");
+        dialoguecanvas.enabled = true;
+        
+        Debug.Log("chapter2 is here");
     }
     if (chap2done)
     {
         chaptertwobackground.SetActive(false);
         chapterthreebackground.SetActive(true);
+<<<<<<< Updated upstream
         
+=======
+            Debug.Log("chapter3 is here");
+       
+>>>>>>> Stashed changes
     }
     if (chap3done)
     {
         chapterthreebackground.SetActive(false);
         chapterfourbackground.SetActive(true);
+<<<<<<< Updated upstream
         
     }
+=======
+            Debug.Log("chapter4 is here");
+
+        }
+>>>>>>> Stashed changes
     if (chap4done)
     {
         chapterfourbackground.SetActive(false);
         endscreen.SetActive(true);
+<<<<<<< Updated upstream
         
     }
+=======
+            dialoguecanvas.enabled = false;
+        Debug.Log("endscreen is here");
+
+        }
+>>>>>>> Stashed changes
 }
 
 }
