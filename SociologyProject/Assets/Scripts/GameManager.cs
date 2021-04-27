@@ -215,19 +215,19 @@ public void nextchapter()
     {
         chaptertwobackground.SetActive(false);
         chapterthreebackground.SetActive(true);
-        turnoffeverything();
+        
     }
     if (chap3done)
     {
         chapterthreebackground.SetActive(false);
         chapterfourbackground.SetActive(true);
-        turnoffeverything();
+        
     }
     if (chap4done)
     {
         chapterfourbackground.SetActive(false);
         endscreen.SetActive(true);
-        turnoffeverything();
+        
     }
 }
 
