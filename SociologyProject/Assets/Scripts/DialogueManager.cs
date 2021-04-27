@@ -45,16 +45,9 @@ public class DialogueManager : MonoBehaviour
         if (GameManager.Instance.choiceA == true)
         {
             chapter1Dialogue[6] = "You just chose option A.";
+            chapter1Dialogue[7] = "Option A path";
         }
     }   
-
-    private void FixedUpdate()
-    {
-        if (GameManager.Instance.choiceA == true)
-        {
-            chapter1Dialogue[6] = "You just chose option A.";
-        }
-    }
 
     public void playGame()
     {
@@ -129,7 +122,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueCanvas.enabled = false;
         policyCanvas.enabled = true;
-        schoolPolicyCanvas.enabled = false;
+        //schoolPolicyCanvas.enabled = false;
         cutScene.enabled = false;
         policyAnimator.SetBool("isOpen", true);
     }
