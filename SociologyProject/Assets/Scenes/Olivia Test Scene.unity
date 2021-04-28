@@ -8800,15 +8800,6 @@ MonoBehaviour:
   schoolPolicyCanvas: {fileID: 1729147731}
   cutScene: {fileID: 1954746041}
   cutSceneDialogue: {fileID: 1037973848}
-  chapter1Dialogue:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   choiceTextNumbers: 000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1647776096
 Transform:

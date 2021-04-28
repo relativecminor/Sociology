@@ -50,6 +50,7 @@ public class DialogueManager : MonoBehaviour
         GameManager.Instance.chapterthreebackground.SetActive(false);
         GameManager.Instance.chapterfourbackground.SetActive(false);
         GameManager.Instance.endscreen.SetActive(false);
+        GameManager.Instance.cutscene.SetActive(false);
   
     }
     private void Update()
@@ -68,6 +69,13 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueCanvas.enabled = true;
         mainMenu.enabled = false;
+        GameManager.Instance.cutscene.SetActive(true);
+        Debug.Log("cutsceen is active");
+        // cut scene dialogue
+
+        //transition to chapter 1 background
+        
+
         chapter1Dialogue[0] = "Welcome to @itsmaya, an exploration into the variety of decisions that will affect students of color.";
         chapter1Dialogue[1] = "You will have the opportunity to allocate money at a federal level. These policies will affect students all over the country.";
         chapter1Dialogue[2] = "You will also have the ability to step into the shoes of individuals whose daily decisions have a personal affect on students of color.";
@@ -94,6 +102,7 @@ public class DialogueManager : MonoBehaviour
         chapter1Dialogue[22] = "Understood. I will write a short blurb in the newsletter addressing this.";
         chapter1Dialogue[23] = "...";
         //Transition to Chapter 2
+        
         chapter1Dialogue[24] = "Welcome to Rock Creek Middle School, where you take the role of the Student Coordinator, Mr. Johnson.";
         chapter1Dialogue[25] = "Hey Mr. Johnson, do you know if there's any room for our school to request cultural competency training this year?";
         chapter1Dialogue[26] = "I've been reading up on some studies recently, and I think it could really help our school.";
@@ -111,6 +120,7 @@ public class DialogueManager : MonoBehaviour
         chapter1Dialogue[36] = "I'll leave the execution in your hands!";
         chapter1Dialogue[37] = "...";
         //transition to Chapter 3
+        
         chapter1Dialogue[38] = "As Maya grows older and her horizon's expand, so does the reach of your power.";
         chapter1Dialogue[39] = "You find yourself in the position of superintendent of the Rock Creek School District.";
         chapter1Dialogue[40] = "Mrs. Williams, do you have a moment?";
@@ -130,6 +140,7 @@ public class DialogueManager : MonoBehaviour
         chapter1Dialogue[54] = "Have a good rest of your day.";
         chapter1Dialogue[55] = "...";
         //transition to Chapter 4
+       
         chapter1Dialogue[56] = "A recent graduate of college yourself, you step into the shoes of Parker, the Student Activities Coordinator for Rock Creek University.";
         chapter1Dialogue[57] = "Hi Parker, do you have a moment? When I was in High School we had a club called Students for Black Culture.";
         chapter1Dialogue[58] = "It was a really great place for me to talk to other students of color, and I was really hoping to join something similar when I came here.";
@@ -145,6 +156,7 @@ public class DialogueManager : MonoBehaviour
         chapter1Dialogue[67] = "Sounds good! I'll pass your word on, and see what happens!";
         chapter1Dialogue[68] = "...";
         //transition to End
+        
 
 
     }
@@ -203,6 +215,52 @@ public class DialogueManager : MonoBehaviour
                 choiceSide.SetActive(true);
                 dialogueSide.SetActive(false);
             }
+            if (currentTextTracker == 0)
+            {
+                GameManager.Instance.chapteronebackground.SetActive(true);
+                GameManager.Instance.cutscene.SetActive(false);
+                Debug.Log("first chapter change");
+            }
+            if(currentTextTracker == 24 ){
+                GameManager.Instance.cutscene.SetActive(true);
+                GameManager.Instance.chapteronebackground.SetActive(false);
+            }
+            if (currentTextTracker == 25)
+            {
+                GameManager.Instance.cutscene.SetActive(false);
+                GameManager.Instance.chaptertwobackground.SetActive(true);
+            }
+            if (currentTextTracker == 38)
+            {
+                GameManager.Instance.chaptertwobackground.SetActive(false);
+                GameManager.Instance.cutscene.SetActive(true);
+            }
+            if (currentTextTracker == 39)
+            {
+                GameManager.Instance.cutscene.SetActive(false);
+                GameManager.Instance.chapterthreebackground.SetActive(true);
+            }
+            if (currentTextTracker ==56 )
+            {
+                GameManager.Instance.chapterthreebackground.SetActive(false);
+                GameManager.Instance.cutscene.SetActive(true);
+                
+            }
+            if (currentTextTracker == 57)
+            {
+                GameManager.Instance.cutscene.SetActive(false);
+                GameManager.Instance.chapterfourbackground.SetActive(true);
+            }
+            if (currentTextTracker == 68)
+            {
+                GameManager.Instance.chapterfourbackground.SetActive(false);
+                GameManager.Instance.cutscene.SetActive(true);
+            }
+            if (currentTextTracker == 69)
+            {
+                GameManager.Instance.cutscene.SetActive(false);
+                GameManager.Instance.endscreen.SetActive(true);
+            }
             currentTextTracker++;
             OpenBox();
             Debug.Log(currentTextTracker);
@@ -230,14 +288,7 @@ public class DialogueManager : MonoBehaviour
         cutScene.enabled = false;
         policyAnimator.SetBool("isOpen", true);
     }
-    public void openSchoolPolicy()
-    {
-        dialogueCanvas.enabled = false;
-        policyCanvas.enabled = false;
-        schoolPolicyCanvas.enabled = true;
-        cutScene.enabled = false;
-        //schoolPolicyAnimator.SetBool("isOpen", true);
-    }
+   
 
     public void openCutScene()
     {
@@ -260,6 +311,7 @@ public class DialogueManager : MonoBehaviour
         cutScene.enabled = false;
         policyAnimator.SetBool("isOpen", false);
 
+        /**
         counter++;
         if (counter == 1)
         {
@@ -287,7 +339,7 @@ public class DialogueManager : MonoBehaviour
             Debug.Log(counter);
         }
         GameManager.Instance.nextchapter();
-
+        **/
 
     }
 

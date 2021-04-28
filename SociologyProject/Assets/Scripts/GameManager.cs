@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public GameObject chapterfourbackground;
     public GameObject endscreen;
     public GameObject schoolbackground;
+    public GameObject cutscene;
 
     public bool chap1;
     public bool chap1done;
@@ -196,11 +197,13 @@ public class GameManager : MonoBehaviour
     }
 
 
-
+/**
 public void nextchapter()
 {
     if (chap1)
         { chapteronebackground.SetActive(true);
+            schoolbackground.SetActive(false);
+            dialoguecanvas.enabled = true;
             Debug.Log("chap1 is here");
         }
     if (chap1done)
@@ -227,9 +230,10 @@ public void nextchapter()
     if (chap4done)
     {
         chapterfourbackground.SetActive(false);
-        endscreen.SetActive(true);
+        //endscreen.SetActive(true);
         
     }
 }
+**/
 
 }
