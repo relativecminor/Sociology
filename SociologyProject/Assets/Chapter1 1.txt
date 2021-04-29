@@ -1,0 +1,62 @@
+
+
+:: StoryTitle
+Chapter1 Copy
+
+:: UserScript[script]
+
+
+:: UserStylesheet[stylesheet]
+
+
+:: TeacherTraining[START]
+As the school year draws to a close and the weather is getting warmer, it's time for School High to select the teacher training programs for the summer.
+As the Principal for Rock Creek Elementary School, people rely on you to make some tough decisions.
+Excuse me, Principal Smith? The upcoming school year is approaching quickly, and we still haven't received your decisions about the faculty training this summer.
+Last year we had some discipline issues with the students. We were hoping to address some of those concerns with this training.
+Option A: Positive Behavior Supports[[PBS]]
+Option B: Students in STEM Training[[STEM]]
+
+:: PBS[Progress3]
+Thank you for letting us know! We will move forward with your selection.
+...
+Next[[GT]]
+
+:: STEM[Progress1]
+Thank you for letting us know! We will move forward with your selection.
+...
+Next[[GT]]
+
+:: GT
+Principal Smith, a parent reached out to us this week with a concerning issue.
+Despite 17% of our students being black, only 10% of the students in our Gifted and Talented program are black.
+We haven't changed any requirements, the students who score above a certain number on our placement test are accepted into the program.
+We're not sure why the disconnect exists and we're not sure if we should try and do something about it.
+Option A: Lower requirement for GT program.[[LowerGTRequirement]]
+Option B: Change selection process for GT program.[[ChangeGTSelection]]
+
+:: Uniforms
+Our sister school recently made the decision to transition away from requiring uniforms.
+There's talk amongst the parents and faculty about whether our school will follow.
+What are your thoughts?
+Option A: Do away with uniforms next year[[DoAwayUniforms]]
+Option B: Continue to require student uniforms[[ContinueUniforms]]
+
+:: LowerGTRequirement[Progress0]
+Hmm, we will do our best to make the appropriate changes. We will move forward with care.
+...
+Next[[Uniforms]]
+
+:: ChangeGTSelection[Progress2]
+Hmm, we will do our best to make the appropriate changes. We will move forward with care.
+...
+Next[[Uniforms]]
+
+:: DoAwayUniforms[END]
+Understood. I will write a short blurb in the newsletter addressing this.
+...
+
+:: ContinueUniforms[END]
+Understood. I will write a short blurb in the newsletter addressing this.
+...
+
