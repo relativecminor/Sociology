@@ -283,9 +283,9 @@ public class DialogueManager : MonoBehaviour
 
     public void OpenPolicy()
     {
-        dialogueCanvas.enabled = false;
+        //dialogueCanvas.enabled = false;
         policyCanvas.enabled = true;
-        cutScene.enabled = false;
+        //cutScene.enabled = false;
         policyAnimator.SetBool("isOpen", true);
     }
    
