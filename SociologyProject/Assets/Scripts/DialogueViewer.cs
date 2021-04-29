@@ -7,9 +7,12 @@ public class DialogueViewer : MonoBehaviour
 {
     public GameObject textBox;
     public GameObject[] buttons;
-    public GameObject nextButton;
     DialogueController dialogueController;
-    private int currentIndex;
+    
+    /*void Awake()
+    {
+        HideAllButtons();
+    }*/
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +20,7 @@ public class DialogueViewer : MonoBehaviour
         dialogueController = GetComponent<DialogueController>();
         dialogueController.onEnteredNode += OnNodeEntered;
         dialogueController.InitializeDialogue();
-        HideAllButtons();
+        
     }
 
     // Update is called once per frame
@@ -33,12 +36,13 @@ public class DialogueViewer : MonoBehaviour
             Debug.Log("ShowPolicy");
         }
         textBox.GetComponent<TextMeshProUGUI>().text = dialogueController.GetCurrentNode().text;
-        //DisplayButtons(dialogueController.GetCurrentNode().responses);
+        ShowResponses(dialogueController.GetCurrentNode().responses);
     }
 
     public void OnNodeSelected(int i)
     {
-        //HideAllButtons();
+        HideAllButtons();
+
         if (!dialogueController.GetCurrentNode().IsEndNode())
         {
             dialogueController.ChooseResponse(i);
@@ -46,22 +50,15 @@ public class DialogueViewer : MonoBehaviour
         
     }
 
-    /*public void DisplayButtons(List<DialogueObject.Response> responses)
+    public void ShowResponses(List<DialogueObject.Response> responses)
     {
-        if (responses.Count < 2)
+        for (int i = 0; i < responses.Count; i++)
         {
-            nextButton.SetActive(true);
-            
+            Debug.Log(responses[i].displayText);
+            buttons[i].GetComponent<Button>().DisplayText(responses[i].displayText);
+            buttons[i].SetActive(true);
         }
-        else
-        {
-            for (int i = 0; i < responses.Count; i++)
-            {
-                buttons[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = responses[i].displayText;
-                buttons[i].SetActive(true);
-            }
-        }
-    }*/
+    }
 
     public void HideAllButtons()
     {
@@ -69,6 +66,6 @@ public class DialogueViewer : MonoBehaviour
         {
             button.SetActive(false);
         }
-        nextButton.SetActive(false);
+        
     }
 }

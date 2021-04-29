@@ -1,4 +1,4 @@
-// Courtesy of Mathew Ventures
+// Courtesy of Matthew Ventures
 // http://www.mrventures.net/all-tutorials/converting-a-twine-story-to-unity
 
 using System.Collections;

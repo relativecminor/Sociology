@@ -1,4 +1,4 @@
-// Courtesy of Mathew Ventures
+// Courtesy of Matthew Ventures
 // http://www.mrventures.net/all-tutorials/converting-a-twine-story-to-unity
 
 using System;
@@ -80,7 +80,7 @@ public class DialogueObject
                 // Normal Format: "NodeTitle [Tags, comma, seperated] \r\n Message Text \r\n [[Response One]] \r\n [[Response Two]]"
                 // No-Tag Format: "NodeTitle \r\n Message Text \r\n [[Response One]] \r\n [[Response Two]]"
                 string currLineText = nodeData[i];
-                Debug.Log(currLineText.IndexOf("[") + " " + currLineText.IndexOf("\n"));
+                //Debug.Log(currLineText.IndexOf("[") + " " + currLineText.IndexOf("\n"));
                 bool tagsPresent = currLineText.IndexOf("[") < currLineText.IndexOf("\n");
                 int endOfFirstLine = currLineText.IndexOf("\n");
 
@@ -151,6 +151,7 @@ public class DialogueObject
                         else
                             curResponse.displayText = curResponseData.Substring(0, destinationStart);
                         curNode.responses.Add(curResponse);
+                        Debug.Log("Resp: " + curResponse.displayText);
                     }
                 }
 
