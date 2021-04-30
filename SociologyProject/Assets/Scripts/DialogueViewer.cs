@@ -32,6 +32,8 @@ public class DialogueViewer : MonoBehaviour
 
     public void OnNodeEntered(DialogueObject.Node node)
     {
+        textBox.GetComponent<TextMeshProUGUI>().text = dialogueController.GetCurrentNode().text;
+
         if (dialogueController.GetCurrentNode().tags.Contains("Policy"))
         {
             Debug.Log("ShowPolicy");
@@ -39,7 +41,6 @@ public class DialogueViewer : MonoBehaviour
         }
         else
         {
-            textBox.GetComponent<TextMeshProUGUI>().text = dialogueController.GetCurrentNode().text;
             ShowResponses(dialogueController.GetCurrentNode().responses);
         }
         
@@ -80,5 +81,5 @@ public class DialogueViewer : MonoBehaviour
         
     }
 
-
+    
 }
