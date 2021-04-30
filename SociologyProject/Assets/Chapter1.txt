@@ -9,7 +9,17 @@ Chapter1 Copy
 :: UserStylesheet[stylesheet]
 
 
-:: TeacherTraining[START]
+:: Intro[START]
+Welcome to itsmaya, an exploration into the variety of decisions that will affect students of color.
+You will have the opportunity to allocate money at a federal level. These policies will affect students all over the country.
+You will also have the ability to step into the shoes of individuals whose daily decisions have a personal affect on students of color.
+Do what you feel is right, and try to make the best of the system that's in place. Good luck!
+Next[[Policy]]
+
+:: Policy[Policy]
+Next[[TeacherTraining]]
+
+:: TeacherTraining
 As the school year draws to a close and the weather is getting warmer, it's time for School High to select the teacher training programs for the summer.
 As the Principal for Rock Creek Elementary School, people rely on you to make some tough decisions.
 Excuse me, Principal Smith? The upcoming school year is approaching quickly, and we still haven't received your decisions about the faculty training this summer.

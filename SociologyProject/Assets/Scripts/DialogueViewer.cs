@@ -8,6 +8,7 @@ public class DialogueViewer : MonoBehaviour
     public GameObject textBox;
     public GameObject[] buttons;
     DialogueController dialogueController;
+    public PolicyController policyController;
     
     /*void Awake()
     {
@@ -34,9 +35,14 @@ public class DialogueViewer : MonoBehaviour
         if (dialogueController.GetCurrentNode().tags.Contains("Policy"))
         {
             Debug.Log("ShowPolicy");
+            policyController.OpenPolicy();
         }
-        textBox.GetComponent<TextMeshProUGUI>().text = dialogueController.GetCurrentNode().text;
-        ShowResponses(dialogueController.GetCurrentNode().responses);
+        else
+        {
+            textBox.GetComponent<TextMeshProUGUI>().text = dialogueController.GetCurrentNode().text;
+            ShowResponses(dialogueController.GetCurrentNode().responses);
+        }
+        
     }
 
     public void OnNodeSelected(int i)
@@ -50,12 +56,17 @@ public class DialogueViewer : MonoBehaviour
         
     }
 
+    public void Next()
+    {
+        OnNodeSelected(0);
+    }
+
     public void ShowResponses(List<DialogueObject.Response> responses)
     {
         for (int i = 0; i < responses.Count; i++)
         {
             Debug.Log(responses[i].displayText);
-            buttons[i].GetComponent<Button>().DisplayText(responses[i].displayText);
+            buttons[i].GetComponent<Button>().DisplayText(responses[responses.Count - 1 - i].displayText);
             buttons[i].SetActive(true);
         }
     }
@@ -68,4 +79,6 @@ public class DialogueViewer : MonoBehaviour
         }
         
     }
+
+
 }
