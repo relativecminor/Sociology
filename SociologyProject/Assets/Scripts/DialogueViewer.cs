@@ -9,7 +9,8 @@ public class DialogueViewer : MonoBehaviour
     public GameObject[] buttons;
     DialogueController dialogueController;
     public PolicyController policyController;
-    
+    public CutSceneController cutSceneController;
+
     /*void Awake()
     {
         HideAllButtons();
@@ -32,16 +33,21 @@ public class DialogueViewer : MonoBehaviour
 
     public void OnNodeEntered(DialogueObject.Node node)
     {
-        textBox.GetComponent<TextMeshProUGUI>().text = dialogueController.GetCurrentNode().text;
 
-        if (dialogueController.GetCurrentNode().tags.Contains("Policy"))
+        textBox.GetComponent<TextMeshProUGUI>().text = node.text;
+
+        if (node.tags.Contains("Policy"))
         {
-            Debug.Log("ShowPolicy");
             policyController.OpenPolicy();
+        }
+        else if (node.tags.Contains("CutScene"))
+        {
+            cutSceneController.OpenCutScene();
+            
         }
         else
         {
-            ShowResponses(dialogueController.GetCurrentNode().responses);
+            ShowResponses(node.responses);
         }
         
     }

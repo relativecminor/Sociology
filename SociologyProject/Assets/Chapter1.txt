@@ -62,11 +62,15 @@ Hmm, we will do our best to make the appropriate changes. We will move forward w
 ...
 Next[[Uniforms]]
 
-:: DoAwayUniforms[END]
+:: DoAwayUniforms
 Understood. I will write a short blurb in the newsletter addressing this.
 ...
+Next[[CutScene]]
 
-:: ContinueUniforms[END]
+:: ContinueUniforms
 Understood. I will write a short blurb in the newsletter addressing this.
 ...
+Next[[CutScene]]
+
+:: CutScene[END CutScene]
 
