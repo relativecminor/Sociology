@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CutSceneController : MonoBehaviour
 {
@@ -26,5 +27,10 @@ public class CutSceneController : MonoBehaviour
     public void CloseCutScene()
     {
         gameObject.SetActive(false);
+    }
+
+    public void DisplayText(string text)
+    {
+        textBox.GetComponent<TextMeshProUGUI>().text = text;
     }
 }

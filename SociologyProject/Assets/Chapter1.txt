@@ -73,4 +73,6 @@ Understood. I will write a short blurb in the newsletter addressing this.
 Next[[CutScene]]
 
 :: CutScene[END CutScene]
+Hey you guys
+Thought I would give you an update
 

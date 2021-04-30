@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using static DialogueObject;
 
 public class DialogueViewer : MonoBehaviour
 {
     public GameObject textBox;
     public GameObject[] buttons;
     DialogueController dialogueController;
+    public PassageController passageController;
     public PolicyController policyController;
     public CutSceneController cutSceneController;
 
@@ -31,7 +33,7 @@ public class DialogueViewer : MonoBehaviour
         
     }
 
-    public void OnNodeEntered(DialogueObject.Node node)
+    public void OnNodeEntered(Node node)
     {
 
         textBox.GetComponent<TextMeshProUGUI>().text = node.text;
@@ -43,7 +45,7 @@ public class DialogueViewer : MonoBehaviour
         else if (node.tags.Contains("CutScene"))
         {
             cutSceneController.OpenCutScene();
-            
+            passageController.InitializePassage(node);
         }
         else
         {
@@ -68,7 +70,7 @@ public class DialogueViewer : MonoBehaviour
         OnNodeSelected(0);
     }
 
-    public void ShowResponses(List<DialogueObject.Response> responses)
+    public void ShowResponses(List<Response> responses)
     {
         for (int i = 0; i < responses.Count; i++)
         {
