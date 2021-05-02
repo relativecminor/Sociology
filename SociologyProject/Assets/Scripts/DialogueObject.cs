@@ -100,7 +100,7 @@ public class DialogueObject
                 
                 int titleEnd = tagsPresent
                     ? currLineText.IndexOf("[")
-                    : endOfFirstLine; Debug.Log(currLineText); Debug.Log(tagsPresent + " " + titleStart + " " + titleEnd);
+                    : endOfFirstLine;
                 string title = currLineText.Substring(titleStart, titleEnd).Trim();
 
                 // Extract Tags (if any)

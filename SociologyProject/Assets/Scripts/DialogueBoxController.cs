@@ -15,6 +15,12 @@ public class DialogueBoxController : MonoBehaviour
 
     private Coroutine dialogueCo;
 
+    /*void Awake()
+    {
+        HideAllButtons();
+    }*/
+
+
     void Start()
     {
         dialogueAnimator = gameObject.GetComponent<Animator>();
@@ -52,6 +58,8 @@ public class DialogueBoxController : MonoBehaviour
         CloseBox();
     }
 
+    
+
     IEnumerator typeText(string text)
     {
         textBox.GetComponent<TextMeshProUGUI>().text = "";
@@ -62,7 +70,4 @@ public class DialogueBoxController : MonoBehaviour
         }
 
     }
-
-
-    
 }

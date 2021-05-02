@@ -24,18 +24,15 @@ As the school year draws to a close and the weather is getting warmer, it's time
 As the Principal for Rock Creek Elementary School, people rely on you to make some tough decisions.
 Excuse me, Principal Smith? The upcoming school year is approaching quickly, and we still haven't received your decisions about the faculty training this summer.
 Last year we had some discipline issues with the students. We were hoping to address some of those concerns with this training.
-Next[[TeacherTrainingResponses]]
-
-:: TeacherTrainingResponses
 Positive Behavior Supports[[PBS]]
 Students in STEM Training[[STEM]]
 
-:: PBS[Progress3]
+:: PBS[Money]
 Thank you for letting us know! We will move forward with your selection.
 ...
 Next[[GT]]
 
-:: STEM[Progress1]
+:: STEM[Money]
 Thank you for letting us know! We will move forward with your selection.
 ...
 Next[[GT]]
@@ -45,19 +42,13 @@ Principal Smith, a parent reached out to us this week with a concerning issue.
 Despite 17% of our students being black, only 10% of the students in our Gifted and Talented program are black.
 We haven't changed any requirements, the students who score above a certain number on our placement test are accepted into the program.
 We're not sure why the disconnect exists and we're not sure if we should try and do something about it.
-Next[[GTResponses]]
-
-:: GTResponses
-Option A: Lower requirement for GT program.[[LowerGTRequirement]]
-Option B: Change selection process for GT program.[[ChangeGTSelection]]
+Lower requirement for GT program.[[LowerGTRequirement]]
+Change selection process for GT program.[[ChangeGTSelection]]
 
 :: Uniforms
 Our sister school recently made the decision to transition away from requiring uniforms.
 There's talk amongst the parents and faculty about whether our school will follow.
 What are your thoughts?
-Next[[UniformsResponses]]
-
-:: UniformsResponses
 Do away with uniforms next year[[DoAwayUniforms]]
 Continue to require student uniforms[[ContinueUniforms]]
 

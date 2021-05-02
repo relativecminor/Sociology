@@ -1,24 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
+using UnityEngine.UI;
 using TMPro;
 using static DialogueObject;
 
 public class DialogueViewer : MonoBehaviour
 {
-    public GameObject textBox;
-    public GameObject[] buttons;
-    DialogueController dialogueController;
+    public GameObject[] choices;
+
     public PassageController passageController;
     public PolicyController policyController;
     public CutSceneController cutSceneController;
     public DialogueBoxController dialogueBoxController;
+    DialogueController dialogueController;
 
-    /*void Awake()
-    {
-        HideAllButtons();
-    }*/
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -38,9 +37,7 @@ public class DialogueViewer : MonoBehaviour
     }
 
     public void OnNodeEntered(Node node)
-    {
-
-        textBox.GetComponent<TextMeshProUGUI>().text = node.text;
+    {                
 
         if (node.tags.Contains("Policy"))
         {
@@ -50,14 +47,17 @@ public class DialogueViewer : MonoBehaviour
         else
         {
             passageController.InitializePassage(node);
+            
         }
+
         
     }
 
     public void OnNodeSelected(int i)
     {
-        HideAllButtons();
-
+        HideAllChoices();
+        dialogueBoxController.dialogueSide.SetActive(true);
+        Debug.Log("Player chose option " + i);
         if (!dialogueController.GetCurrentNode().IsEndNode())
         {
             dialogueController.ChooseResponse(i);
@@ -67,12 +67,12 @@ public class DialogueViewer : MonoBehaviour
 
     public void OnChunkEntered(string chunk)
     {
-        //textBox.GetComponent<TextMeshProUGUI>().text = chunk;
+        
         if (dialogueController.GetCurrentNode().tags.Contains("CutScene"))
         {
             dialogueBoxController.HideDialogue(); //
-            cutSceneController.gameObject.SetActive(true);
             cutSceneController.DisplayText(chunk);
+
             Debug.Log("Entered chunk with text: " + chunk);
         }
         else
@@ -89,29 +89,45 @@ public class DialogueViewer : MonoBehaviour
         }
         else
         {
-            // Move on to next node
-            OnNodeSelected(0);
+            if (dialogueController.GetCurrentNode().responses.Count > 1)
+            {
+                
+                ShowChoices(dialogueController.GetCurrentNode().responses);
+                Debug.Log("Reached responses: ");
+                foreach (Response response in dialogueController.GetCurrentNode().responses)
+                {
+                    Debug.Log(response.displayText);
+                }
+            }
+            else { OnNodeSelected(0); } // Move on to next node
+
+
         }
     }
 
-    /*public void ShowResponses(List<Response> responses)
+    
+
+    public void ShowChoices(List<Response> responses)
     {
+        //HideAllChoices();
+        dialogueBoxController.dialogueSide.SetActive(false);
+        Assert.IsTrue(choices.Length >= responses.Count);
         for (int i = 0; i < responses.Count; i++)
         {
-            Debug.Log(responses[i].displayText);
-            buttons[i].GetComponent<Button>().DisplayText(responses[responses.Count - 1 - i].displayText);
-            buttons[i].SetActive(true);
-        }
-    }*/
+            //choices[i].GetComponent<Button>().onClick.AddListener(delegate { OnNodeSelected(i); });
+            choices[i].SetActive(true);
+            choices[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = responses[responses.Count - (i + 1)].displayText;
+            
+            
+        }        
+    }
 
-    public void HideAllButtons()
+    public void HideAllChoices()
     {
-        foreach (GameObject button in buttons)
+        foreach (GameObject button in choices)
         {
             button.SetActive(false);
         }
         
     }
-
-    
 }
