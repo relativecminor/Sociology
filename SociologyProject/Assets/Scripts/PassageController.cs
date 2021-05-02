@@ -25,14 +25,12 @@ public class PassageController : MonoBehaviour
     public void InitializePassage(Node node)
     {
         chunks = node.text.Split(new string[] { "\n" }, StringSplitOptions.None);
-        Debug.Log("Chunks: " + chunks[0] + " " + chunks[1]);
         currentIndex = 0;
         onEnteredChunk(chunks[currentIndex]);
     }
 
     public void Next()
     {
-        // TODO: integrate responses
         string nextChunk = chunks[++currentIndex];
         Debug.Log(nextChunk);
         onEnteredChunk(nextChunk);

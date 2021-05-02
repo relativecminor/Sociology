@@ -12,6 +12,7 @@ public class DialogueViewer : MonoBehaviour
     public PassageController passageController;
     public PolicyController policyController;
     public CutSceneController cutSceneController;
+    public DialogueBoxController dialogueBoxController;
 
     /*void Awake()
     {
@@ -22,7 +23,10 @@ public class DialogueViewer : MonoBehaviour
     void Start()
     {
         dialogueController = GetComponent<DialogueController>();
+
         dialogueController.onEnteredNode += OnNodeEntered;
+        passageController.onEnteredChunk += OnChunkEntered;
+
         dialogueController.InitializeDialogue();
         
     }
@@ -40,16 +44,12 @@ public class DialogueViewer : MonoBehaviour
 
         if (node.tags.Contains("Policy"))
         {
+            dialogueBoxController.HideDialogue();
             policyController.OpenPolicy();
-        }
-        else if (node.tags.Contains("CutScene"))
-        {
-            cutSceneController.OpenCutScene();
-            passageController.InitializePassage(node);
         }
         else
         {
-            ShowResponses(node.responses);
+            passageController.InitializePassage(node);
         }
         
     }
@@ -65,12 +65,36 @@ public class DialogueViewer : MonoBehaviour
         
     }
 
-    public void Next()
+    public void OnChunkEntered(string chunk)
     {
-        OnNodeSelected(0);
+        //textBox.GetComponent<TextMeshProUGUI>().text = chunk;
+        if (dialogueController.GetCurrentNode().tags.Contains("CutScene"))
+        {
+            dialogueBoxController.HideDialogue(); //
+            cutSceneController.gameObject.SetActive(true);
+            cutSceneController.DisplayText(chunk);
+            Debug.Log("Entered chunk with text: " + chunk);
+        }
+        else
+        {
+            dialogueBoxController.StartDialogue(chunk);
+        }
     }
 
-    public void ShowResponses(List<Response> responses)
+    public void Next()
+    {
+        if (!passageController.IsEndOfPassagage())
+        {
+            passageController.Next();
+        }
+        else
+        {
+            // Move on to next node
+            OnNodeSelected(0);
+        }
+    }
+
+    /*public void ShowResponses(List<Response> responses)
     {
         for (int i = 0; i < responses.Count; i++)
         {
@@ -78,7 +102,7 @@ public class DialogueViewer : MonoBehaviour
             buttons[i].GetComponent<Button>().DisplayText(responses[responses.Count - 1 - i].displayText);
             buttons[i].SetActive(true);
         }
-    }
+    }*/
 
     public void HideAllButtons()
     {

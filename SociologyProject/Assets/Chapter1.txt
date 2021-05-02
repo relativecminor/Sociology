@@ -27,8 +27,8 @@ Last year we had some discipline issues with the students. We were hoping to add
 Next[[TeacherTrainingResponses]]
 
 :: TeacherTrainingResponses
-Option A: Positive Behavior Supports[[PBS]]
-Option B: Students in STEM Training[[STEM]]
+Positive Behavior Supports[[PBS]]
+Students in STEM Training[[STEM]]
 
 :: PBS[Progress3]
 Thank you for letting us know! We will move forward with your selection.
@@ -58,8 +58,8 @@ What are your thoughts?
 Next[[UniformsResponses]]
 
 :: UniformsResponses
-Option A: Do away with uniforms next year[[DoAwayUniforms]]
-Option B: Continue to require student uniforms[[ContinueUniforms]]
+Do away with uniforms next year[[DoAwayUniforms]]
+Continue to require student uniforms[[ContinueUniforms]]
 
 :: LowerGTRequirement[Progress0]
 Hmm, we will do our best to make the appropriate changes. We will move forward with care.

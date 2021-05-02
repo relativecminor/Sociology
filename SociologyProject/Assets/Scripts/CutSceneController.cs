@@ -5,12 +5,13 @@ using TMPro;
 
 public class CutSceneController : MonoBehaviour
 {
+    public GameObject background;
     public GameObject textBox;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        background.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,16 +22,18 @@ public class CutSceneController : MonoBehaviour
 
     public void OpenCutScene()
     {
-        gameObject.SetActive(true);
+        background.SetActive(true);
     }
 
     public void CloseCutScene()
     {
-        gameObject.SetActive(false);
+        background.SetActive(false);
     }
 
     public void DisplayText(string text)
     {
+        OpenCutScene();
+        Debug.Log("Showing text: " + text);
         textBox.GetComponent<TextMeshProUGUI>().text = text;
     }
 }
