@@ -12,19 +12,23 @@ public class DialogueViewer : MonoBehaviour
 {
     public GameObject[] choices;
 
-    public PassageController passageController;
+    PassageController passageController;
     public PolicyController policyController;
     public CutSceneController cutSceneController;
     public DialogueBoxController dialogueBoxController;
     DialogueController dialogueController;
 
-    
+    public int curChapterIndex;
+    public TextAsset[] chapters;
+    public GameObject[] backgrounds;
+
     // Start is called before the first frame update
     void Start()
     {
         dialogueController = GetComponent<DialogueController>();
-
         dialogueController.onEnteredNode += OnNodeEntered;
+
+        passageController = GetComponent<PassageController>();
         passageController.onEnteredChunk += OnChunkEntered;
 
         //dialogueController.InitializeDialogue();
@@ -38,18 +42,40 @@ public class DialogueViewer : MonoBehaviour
         
     }
 
+    public void InitializeDialogue()
+    {
+        //
+        curChapterIndex = 0;
+        dialogueController.InitializeDialogue(chapters[curChapterIndex]);
+        Debug.Log("Initialized dialogue");
+        backgrounds[curChapterIndex].SetActive(true);
+    }
+
+    public void NextChapter()
+    {
+        if (curChapterIndex < chapters.Length - 1)
+        {
+            backgrounds[curChapterIndex].SetActive(false);
+            dialogueController.InitializeDialogue(chapters[++curChapterIndex]);
+            backgrounds[curChapterIndex].SetActive(true);
+        }
+        
+    }
+
     public void OnNodeEntered(Node node)
     {                
 
         if (node.tags.Contains("Policy"))
         {
             dialogueBoxController.HideDialogue();
+
             policyController.OpenPolicy();
+            //dialogueBoxController.policyButton.GetComponent<Button>().interactable = true;
         }
         else
         {
             passageController.InitializePassage(node);
-            
+            //dialogueBoxController.policyButton.GetComponent<Button>().interactable = false; //
         }
 
         // Actions
@@ -74,7 +100,8 @@ public class DialogueViewer : MonoBehaviour
         {
             cutSceneController.CloseCutScene();
             Debug.Log("Entering next chapter");
-            dialogueController.NextChapter();
+            //GameController.Instance.NextChapter();
+            NextChapter();
         }
     }
 

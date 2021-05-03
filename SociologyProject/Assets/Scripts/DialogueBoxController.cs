@@ -12,6 +12,7 @@ public class DialogueBoxController : MonoBehaviour
     public GameObject choiceSide;
     public GameObject dialogueBox;
     public GameObject textBox;
+    public GameObject policyButton;
 
     private Coroutine dialogueCo;
 

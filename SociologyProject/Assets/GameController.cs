@@ -14,8 +14,11 @@ public class GameController : MonoBehaviour
     public int money;
     private int progress;
     private int openPolicy;
-    public DialogueController dialogueController; // Needed to start dialogue
+    //public DialogueController dialogueController; // Needed to start dialogue
     public GameObject mainMenu;
+    //public int curChapterIndex;
+    //public GameObject[] chapters;
+    public DialogueViewer dialogueViewer;
 
     public List<Policy> schoolPolicies = new List<Policy>();
     [SerializeField] TextAsset policies;
@@ -56,6 +59,31 @@ public class GameController : MonoBehaviour
     {
 
     }
+
+    /*public GameObject GetCurChapter()
+    {
+        return chapters[curChapterIndex];
+    }*/
+
+    public void StartGame()
+    {
+        mainMenu.SetActive(false);
+        // TODO: Add assertion
+        //curChapterIndex = 0;
+
+        //chapters[curChapterIndex].SetActive(true);
+        dialogueViewer.InitializeDialogue();
+    }
+
+    /*public void NextChapter()
+    {
+        if (curChapterIndex < chapters.Length - 1)
+        {
+            chapters[curChapterIndex].SetActive(false);
+            chapters[curChapterIndex].SetActive(true);
+        }
+
+    }*/
 
     public void ChangeMoney(int amount)
     {
@@ -112,11 +140,11 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void StartGame()
+    /*public void StartGame()
     {
         mainMenu.SetActive(false);
         dialogueController.StartDialogue();
-    }
+    }*/
 
     // Policy stuff
     public void purchasePolicy()

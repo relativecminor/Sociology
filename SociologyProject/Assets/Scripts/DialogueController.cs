@@ -9,11 +9,12 @@ using static DialogueObject;
 public class DialogueController : MonoBehaviour
 {
 
-    [SerializeField] TextAsset[] chapters;
-    public GameObject[] backgrounds;
+    //[SerializeField] TextAsset[] chapters;
+    //[SerializeField] TextAsset twineText;
+    //public GameObject[] backgrounds;
     Dialogue curDialogue;
     Node curNode;
-    int curChapterIndex;
+    
 
     public delegate void NodeEnteredHandler(Node node);
     public event NodeEnteredHandler onEnteredNode;
@@ -23,31 +24,12 @@ public class DialogueController : MonoBehaviour
         return curNode;
     }
 
-    public void InitializeDialogue(TextAsset chapter)
+    public void InitializeDialogue(TextAsset twineText)
     {
-        curDialogue = new Dialogue(chapter);
+        curDialogue = new Dialogue(twineText);
         curNode = curDialogue.GetStartNode();
         onEnteredNode(curNode);
-    }
-
-    public void StartDialogue()
-    {
-        // TODO: Add assertion
-        curChapterIndex = 0;
-        InitializeDialogue(chapters[curChapterIndex]);
-        backgrounds[curChapterIndex].SetActive(true);
-    }
-
-    public void NextChapter()
-    {
-        if (curChapterIndex < chapters.Length - 1)
-        {
-            backgrounds[curChapterIndex].SetActive(false);
-            InitializeDialogue(chapters[++curChapterIndex]);
-            backgrounds[curChapterIndex].SetActive(true);
-        }
-        
-    }
+    }    
 
     public List<Response> GetCurrentResponses()
     {
