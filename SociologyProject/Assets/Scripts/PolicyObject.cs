@@ -19,14 +19,14 @@ public class PolicyObject
         string[] policyData = text.Split(new string[] { "\n" }, StringSplitOptions.None);
 
         List<Policy> policies = new List<Policy>();
-        for (int i = 0; i < policyData.Length; i++)
+        for (int i = 1; i < policyData.Length; i++)
         {
-            string[] policyDetails = policyData[i].Split(new string[] { " " }, StringSplitOptions.None);
-            
+            string[] policyDetails = policyData[i].Split(new string[] { "," }, StringSplitOptions.None);
+            Debug.Log("prereq " + policyDetails[2]);
             string policyName = policyDetails[0];
             int policyCost = Int32.Parse(policyDetails[1]);
 
-            string requirement = policyData[2];
+            string requirement = policyDetails[2];
             int progress = Int32.Parse(policyDetails[3]);
             int money = Int32.Parse(policyDetails[4]);
 

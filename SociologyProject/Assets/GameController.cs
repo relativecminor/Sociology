@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,8 +79,22 @@ public class GameController : MonoBehaviour
 
     public bool IsAvailable(string policyName)
     {
-        //
-        return FindPolicy(policyName).cost <= money;
+        Policy policy = FindPolicy(policyName);
+        return IsEnoughMoney(policy) && ConditionsMet(policy);
+    }
+
+    private bool IsEnoughMoney(Policy policy)
+    {
+        return policy.cost <= money;
+    }
+
+    private bool ConditionsMet(Policy policy)
+    {
+        foreach (string condition in policy.requires)
+        {
+            if (!IsActive(condition)) { return false; }
+        }
+        return true;
     }
 
     public void ActivatePolicy(Policy policy)
@@ -197,6 +212,12 @@ public class GameController : MonoBehaviour
         0,
         0,
         0};
-    private bool[] policyPurchased = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
+    private bool[] policyPurchased = new bool[] { true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
 
+
+    public bool IsActive(string title)
+    {
+        Debug.Log(title);
+        return policyPurchased[Array.IndexOf(policyTitle, title)];
+    }
 }
