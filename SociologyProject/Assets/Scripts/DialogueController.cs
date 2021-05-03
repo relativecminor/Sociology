@@ -10,6 +10,7 @@ public class DialogueController : MonoBehaviour
 {
 
     [SerializeField] TextAsset[] chapters;
+    public GameObject[] backgrounds;
     Dialogue curDialogue;
     Node curNode;
     int curChapterIndex;
@@ -34,13 +35,16 @@ public class DialogueController : MonoBehaviour
         // TODO: Add assertion
         curChapterIndex = 0;
         InitializeDialogue(chapters[curChapterIndex]);
+        backgrounds[curChapterIndex].SetActive(true);
     }
 
     public void NextChapter()
     {
         if (curChapterIndex < chapters.Length - 1)
         {
+            backgrounds[curChapterIndex].SetActive(false);
             InitializeDialogue(chapters[++curChapterIndex]);
+            backgrounds[curChapterIndex].SetActive(true);
         }
         
     }

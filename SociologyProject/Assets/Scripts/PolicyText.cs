@@ -24,7 +24,9 @@ public class PolicyText : MonoBehaviour
 
     public void PolicyClicked(int policyNumber)
     {
-        StartDialogue(GameManager.Instance.getPolicyDescription(policyNumber));
+        StartDialogue(GameController.Instance.getPolicyDescription(policyNumber));
+
+        //StartDialogue(GameManager.Instance.getPolicyDescription(policyNumber));
         Debug.Log("hey I know the Policy Number: " + policyNumber);
     }
 
@@ -40,13 +42,16 @@ public class PolicyText : MonoBehaviour
 
     public void StartDialogue(string text)
     {;
-        GameManager.Instance.StopAllCoroutines();
+        GameController.Instance.StopAllCoroutines();
+
+        //GameManager.Instance.StopAllCoroutines();
         dialogueCo = StartCoroutine(typeText(text));
     }
 
     public void PolicyPurchased(int policyNumber)
     {
-        if (GameManager.Instance.getPolicyPurchased(policyNumber))
+        //if (GameManager.Instance.getPolicyPurchased(policyNumber))
+        if (GameController.Instance.getPolicyPurchased(policyNumber))
         {
             this.GetComponent<Image>().color = Color.white;
         }

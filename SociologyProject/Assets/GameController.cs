@@ -212,7 +212,7 @@ public class GameController : MonoBehaviour
         0,
         0,
         0};
-    private bool[] policyPurchased = new bool[] { true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
+    private bool[] policyPurchased = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
 
 
     public bool IsActive(string title)
