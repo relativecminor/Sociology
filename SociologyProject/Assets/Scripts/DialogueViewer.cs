@@ -27,8 +27,9 @@ public class DialogueViewer : MonoBehaviour
         dialogueController.onEnteredNode += OnNodeEntered;
         passageController.onEnteredChunk += OnChunkEntered;
 
-        dialogueController.InitializeDialogue();
+        //dialogueController.InitializeDialogue();
         
+
     }
 
     // Update is called once per frame
@@ -69,7 +70,12 @@ public class DialogueViewer : MonoBehaviour
         {
             dialogueController.ChooseResponse(i);
         }
-        
+        else
+        {
+            cutSceneController.CloseCutScene();
+            Debug.Log("Entering next chapter");
+            dialogueController.NextChapter();
+        }
     }
 
     public void OnChunkEntered(string chunk)
@@ -124,6 +130,7 @@ public class DialogueViewer : MonoBehaviour
             //choices[i].GetComponent<Button>().onClick.AddListener(delegate { OnNodeSelected(i); });
             choices[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = responses[responses.Count - (i + 1)].displayText;
 
+            // TODO: Add not null assertion
             if (!GameController.Instance.IsAvailable(responses[responses.Count - (i + 1)].destinationNode))
             {
                 choices[i].GetComponent<Button>().interactable = false;

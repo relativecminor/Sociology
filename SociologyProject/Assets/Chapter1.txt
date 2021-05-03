@@ -1,7 +1,7 @@
 
 
 :: StoryTitle
-Chapter1 Copy
+Chapter1
 
 :: UserScript[script]
 
@@ -72,7 +72,7 @@ Understood. I will write a short blurb in the newsletter addressing this.
 ...
 Next[[CutScene]]
 
-:: CutScene[END CutScene]
+:: CutScene[END CutScene Chapter2]
 Hey you guys
 Thought I would give you an update
 

@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
     public int money;
     private int progress;
     private int openPolicy;
+    public DialogueController dialogueController; // Needed to start dialogue
+    public GameObject mainMenu;
 
     public List<Policy> schoolPolicies = new List<Policy>();
     [SerializeField] TextAsset policies;
@@ -44,6 +46,8 @@ public class GameController : MonoBehaviour
             Debug.Log("--");
 
         }
+
+        mainMenu.SetActive(true);
     }
 
     // Update is called once per frame
@@ -93,7 +97,11 @@ public class GameController : MonoBehaviour
         }
     }
 
-
+    public void StartGame()
+    {
+        mainMenu.SetActive(false);
+        dialogueController.StartDialogue();
+    }
 
     // Policy stuff
     public void purchasePolicy()

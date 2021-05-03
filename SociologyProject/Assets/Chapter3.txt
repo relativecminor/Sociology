@@ -1,0 +1,18 @@
+
+
+:: StoryTitle
+Chapter3
+
+:: UserScript[script]
+
+
+:: UserStylesheet[stylesheet]
+
+
+:: Intro[START]
+This is chapter THREE.
+Next[[NextNode]]
+
+:: NextNode[END]
+Just a random next node.
+

@@ -1,0 +1,18 @@
+
+
+:: StoryTitle
+Chapter2
+
+:: UserScript[script]
+
+
+:: UserStylesheet[stylesheet]
+
+
+:: Intro[START]
+This is chapter TWO.
+Next[[NextNode]]
+
+:: NextNode[END]
+Just a random next node.
+

@@ -9,9 +9,10 @@ using static DialogueObject;
 public class DialogueController : MonoBehaviour
 {
 
-    [SerializeField] TextAsset twineText;
+    [SerializeField] TextAsset[] chapters;
     Dialogue curDialogue;
     Node curNode;
+    int curChapterIndex;
 
     public delegate void NodeEnteredHandler(Node node);
     public event NodeEnteredHandler onEnteredNode;
@@ -21,11 +22,27 @@ public class DialogueController : MonoBehaviour
         return curNode;
     }
 
-    public void InitializeDialogue()
+    public void InitializeDialogue(TextAsset chapter)
     {
-        curDialogue = new Dialogue(twineText);
+        curDialogue = new Dialogue(chapter);
         curNode = curDialogue.GetStartNode();
         onEnteredNode(curNode);
+    }
+
+    public void StartDialogue()
+    {
+        // TODO: Add assertion
+        curChapterIndex = 0;
+        InitializeDialogue(chapters[curChapterIndex]);
+    }
+
+    public void NextChapter()
+    {
+        if (curChapterIndex < chapters.Length - 1)
+        {
+            InitializeDialogue(chapters[++curChapterIndex]);
+        }
+        
     }
 
     public List<Response> GetCurrentResponses()
