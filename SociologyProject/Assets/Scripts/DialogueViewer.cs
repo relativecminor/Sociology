@@ -21,6 +21,10 @@ public class DialogueViewer : MonoBehaviour
     public int curChapterIndex;
     public TextAsset[] chapters;
     public GameObject[] backgrounds;
+    public GameObject characterA;
+    public GameObject characterB;
+    public GameObject characterC;
+    public GameObject characterD;
 
     // Start is called before the first frame update
     void Start()
@@ -74,6 +78,11 @@ public class DialogueViewer : MonoBehaviour
         }
         else
         {
+            if (dialogueController.GetCurrentNode().tags.Contains("A"))
+            {
+                characterA.SetActive(true);
+                Debug.Log("A");
+            }
             passageController.InitializePassage(node);
             //dialogueBoxController.policyButton.GetComponent<Button>().interactable = false; //
         }
@@ -89,8 +98,10 @@ public class DialogueViewer : MonoBehaviour
 
     public void OnNodeSelected(int i)
     {
+        ClearCharacters();
         HideAllChoices();
         dialogueBoxController.dialogueSide.SetActive(true);
+
         Debug.Log("Player chose option " + i);
         if (!dialogueController.GetCurrentNode().IsEndNode())
         {
@@ -117,6 +128,7 @@ public class DialogueViewer : MonoBehaviour
         }
         else
         {
+            
             dialogueBoxController.StartDialogue(chunk);
         }
     }
@@ -180,5 +192,10 @@ public class DialogueViewer : MonoBehaviour
             
         }
         
+    }
+
+    public void ClearCharacters()
+    {
+        characterA.SetActive(false);
     }
 }
