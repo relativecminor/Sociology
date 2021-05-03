@@ -117,8 +117,16 @@ public class DialogueViewer : MonoBehaviour
             //choices[i].GetComponent<Button>().onClick.AddListener(delegate { OnNodeSelected(i); });
             choices[i].SetActive(true);
             choices[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = responses[responses.Count - (i + 1)].displayText;
-            
-            
+
+            if (!GameController.Instance.IsAvailable(responses[responses.Count - (i + 1)].destinationNode))
+            {
+                choices[i].GetComponent<Button>().interactable = false;
+            }
+            else
+            {
+                choices[i].GetComponent<Button>().interactable = true;
+
+            }
         }        
     }
 
@@ -127,6 +135,7 @@ public class DialogueViewer : MonoBehaviour
         foreach (GameObject button in choices)
         {
             button.SetActive(false);
+            
         }
         
     }

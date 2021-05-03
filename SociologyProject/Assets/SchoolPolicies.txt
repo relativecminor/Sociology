@@ -1,0 +1,6 @@
+PBS 0 none 3 0
+STEM 10 none 1 0
+LowerGTRequirement 0 none 0 0
+ChangeGTSelection 0 none 2 0
+DoAwayUniforms 0 none 1 0
+ContinueUniforms 0 none 1 0

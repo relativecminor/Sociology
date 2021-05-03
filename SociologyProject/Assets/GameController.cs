@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using static PolicyObject;
 
 public class GameController : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class GameController : MonoBehaviour
     public int money;
     private int progress;
     private int openPolicy;
+
+    public List<Policy> schoolPolicies = new List<Policy>();
+    [SerializeField] TextAsset policies;
 
     private void Awake()
     {
@@ -30,6 +35,15 @@ public class GameController : MonoBehaviour
     void Start()
     {
         progress = 0;
+        PolicyObject policyObject = new PolicyObject();
+        schoolPolicies = policyObject.ParsePolicies(policies);
+        foreach (Policy policy in schoolPolicies)
+        {
+            Debug.Log("Name: " + policy.name);
+            Debug.Log("Cost: " + policy.cost);
+            Debug.Log("--");
+
+        }
     }
 
     // Update is called once per frame
@@ -49,7 +63,20 @@ public class GameController : MonoBehaviour
         progress += amount;
     }
 
+    public Policy GetPolicy(string name)
+    {
+        foreach (Policy policy in schoolPolicies)
+        {
+            if (policy.name == name) return policy;
+        }
+        return null;
+    }
 
+    public bool IsAvailable(string policyName)
+    {
+        //
+        return GetPolicy(policyName).cost <= money;
+    }
 
 
 
