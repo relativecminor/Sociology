@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
         progress += amount;
     }
 
-    public Policy GetPolicy(string name)
+    public Policy FindPolicy(string name)
     {
         foreach (Policy policy in schoolPolicies)
         {
@@ -75,9 +75,23 @@ public class GameController : MonoBehaviour
     public bool IsAvailable(string policyName)
     {
         //
-        return GetPolicy(policyName).cost <= money;
+        return FindPolicy(policyName).cost <= money;
     }
 
+    public void ActivatePolicy(Policy policy)
+    {
+        foreach ((string Name, int Value) action in policy.actions)
+        {
+            if (action.Name == "money")
+            {
+                ChangeMoney(action.Value);
+            }
+            else
+            {
+                ChangeProgress(action.Value);
+            }
+        }
+    }
 
 
 

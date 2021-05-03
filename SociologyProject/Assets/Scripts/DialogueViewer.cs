@@ -6,6 +6,7 @@ using UnityEngine.Assertions;
 using UnityEngine.UI;
 using TMPro;
 using static DialogueObject;
+using static PolicyObject;
 
 public class DialogueViewer : MonoBehaviour
 {
@@ -50,7 +51,13 @@ public class DialogueViewer : MonoBehaviour
             
         }
 
-        
+        // Actions
+        Policy policy = GameController.Instance.FindPolicy(node.title);
+        if (policy != null)
+        {
+            Debug.Log("Activating policy: " + policy.name);
+            GameController.Instance.ActivatePolicy(policy);
+        }
     }
 
     public void OnNodeSelected(int i)
@@ -115,7 +122,6 @@ public class DialogueViewer : MonoBehaviour
         for (int i = 0; i < responses.Count; i++)
         {
             //choices[i].GetComponent<Button>().onClick.AddListener(delegate { OnNodeSelected(i); });
-            choices[i].SetActive(true);
             choices[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = responses[responses.Count - (i + 1)].displayText;
 
             if (!GameController.Instance.IsAvailable(responses[responses.Count - (i + 1)].destinationNode))
@@ -127,7 +133,9 @@ public class DialogueViewer : MonoBehaviour
                 choices[i].GetComponent<Button>().interactable = true;
 
             }
-        }        
+            choices[i].SetActive(true);
+
+        }
     }
 
     public void HideAllChoices()
