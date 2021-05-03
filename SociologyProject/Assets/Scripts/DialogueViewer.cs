@@ -25,6 +25,7 @@ public class DialogueViewer : MonoBehaviour
     public GameObject characterB;
     public GameObject characterC;
     public GameObject characterD;
+    public GameObject intro;
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +83,11 @@ public class DialogueViewer : MonoBehaviour
             {
                 characterA.SetActive(true);
                 Debug.Log("A");
+            }
+            if (dialogueController.GetCurrentNode().tags.Contains("A"))
+            {
+                characterA.SetActive(true);
+                Debug.Log("Intro");
             }
             passageController.InitializePassage(node);
             //dialogueBoxController.policyButton.GetComponent<Button>().interactable = false; //
@@ -197,5 +203,6 @@ public class DialogueViewer : MonoBehaviour
     public void ClearCharacters()
     {
         characterA.SetActive(false);
+        intro.SetActive(false);
     }
 }
