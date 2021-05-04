@@ -24,8 +24,8 @@ public class PolicyText : MonoBehaviour
 
     public void PolicyClicked(int policyNumber)
     {
-        StartDialogue(GameController.Instance.getPolicyDescription(policyNumber));
-
+        Debug.Log(policyNumber);
+        StartDialogue(PolicyManager.Instance.getPolicyDescription(policyNumber));
         //StartDialogue(GameManager.Instance.getPolicyDescription(policyNumber));
         Debug.Log("hey I know the Policy Number: " + policyNumber);
     }
@@ -42,16 +42,15 @@ public class PolicyText : MonoBehaviour
 
     public void StartDialogue(string text)
     {;
-        GameController.Instance.StopAllCoroutines();
-
-        //GameManager.Instance.StopAllCoroutines();
+        StopAllCoroutines(); // REALLY NEED TO FIX THIS BUG OF THE TEXT REPEATING
+        //GameController.Instance.StopAllCoroutines();
         dialogueCo = StartCoroutine(typeText(text));
     }
 
     public void PolicyPurchased(int policyNumber)
     {
         //if (GameManager.Instance.getPolicyPurchased(policyNumber))
-        if (GameController.Instance.getPolicyPurchased(policyNumber))
+        if (PolicyManager.Instance.getPolicyPurchased(policyNumber))
         {
             this.GetComponent<Image>().color = Color.white;
         }
