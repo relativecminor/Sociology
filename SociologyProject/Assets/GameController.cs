@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     //public int curChapterIndex;
     //public GameObject[] chapters;
     public DialogueViewer dialogueViewer;
+    public GameObject pauseMenu;
+    public bool gamePaused = false;
 
     public List<Policy> schoolPolicies = new List<Policy>();
     [SerializeField] TextAsset policies;
@@ -52,12 +54,24 @@ public class GameController : MonoBehaviour
         }
 
         mainMenu.SetActive(true);
+        pauseMenu.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        // Toggle pause menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!gamePaused)
+            {
+                Pause();
+            }
+            else
+            {
+                Resume();
+            }
+        }
     }
 
     /*public GameObject GetCurChapter()
@@ -73,6 +87,10 @@ public class GameController : MonoBehaviour
 
         //chapters[curChapterIndex].SetActive(true);
         dialogueViewer.InitializeDialogue();
+
+        money = 0;
+        progress = 0;
+        // TODO: Reset purchased policies
     }
 
     /*public void NextChapter()
@@ -84,6 +102,25 @@ public class GameController : MonoBehaviour
         }
 
     }*/
+
+    public void Pause()
+    {
+        gamePaused = true;
+        pauseMenu.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        gamePaused = false;
+        pauseMenu.SetActive(false);
+    }
+
+    public void MainMenu()
+    {
+        gamePaused = false;
+        pauseMenu.SetActive(false);
+        mainMenu.SetActive(true);
+    }
 
     public void ChangeMoney(int amount)
     {

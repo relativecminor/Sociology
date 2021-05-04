@@ -67,6 +67,10 @@ public class DialogueBoxController : MonoBehaviour
         foreach (char c in text.ToCharArray())
         {
             textBox.GetComponent<TextMeshProUGUI>().text += c;
+            // https://answers.unity.com/questions/904429/pause-and-resume-coroutine-1.html
+            while (GameController.Instance.gamePaused) {
+                yield return null;
+            }
             yield return new WaitForSeconds(.03f);
         }
 

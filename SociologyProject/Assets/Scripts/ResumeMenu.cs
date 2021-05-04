@@ -15,17 +15,7 @@ public class ResumeMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!canvas.enabled)
-            {
-                canvas.enabled = true;
-            }
-            else
-            {
-                canvas.enabled = false;
-            }
-        }
+        
 
         
     }
