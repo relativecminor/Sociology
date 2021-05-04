@@ -33,6 +33,17 @@ I’ll leave the execution in your hands!
 Next[[CulturalCompetency]]
 
 :: UniformB
+Mr. Johnson! We can’t be cutting so much slack for students who come to school without a proper uniform.
+I know you work closely with the parents and students, so I need you to find a solution that upholds the pride of our school.
+Allow uniform purchases through voucher system[[Vouchers]]
+Issue suspensions to students without uniforms[[Suspensions]]
+
+:: Vouchers
+I trust that this is the right decision
+Next[[CulturalCompetency]]
+
+:: Suspensions
+See to it that it works
 Next[[CulturalCompetency]]
 
 :: CulturalCompetency
