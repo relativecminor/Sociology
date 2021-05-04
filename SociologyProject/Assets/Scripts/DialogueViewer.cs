@@ -67,6 +67,13 @@ public class DialogueViewer : MonoBehaviour
         {
             backgrounds[curChapterIndex].SetActive(false);
             dialogueController.InitializeDialogue(chapters[++curChapterIndex]);
+
+            // Skip
+            if (curChapterIndex == 1 && GameController.Instance.IsActiveSchoolPolicy("ContinueUniforms"))
+            {
+                dialogueController.UpdateDialogue();
+            }
+
             backgrounds[curChapterIndex].SetActive(true);
         }
         

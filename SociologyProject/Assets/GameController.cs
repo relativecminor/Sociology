@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     public bool gamePaused = false;
     public bool macLineEndings = false;
     string delimeter = "\r\n";
+    public List<Policy> activeSchoolPolicies = new List<Policy>();
 
     public List<Policy> schoolPolicies = new List<Policy>();
     [SerializeField] TextAsset policies;
@@ -146,6 +147,16 @@ public class GameController : MonoBehaviour
         return null;
     }
 
+    public bool IsActiveSchoolPolicy(string policyName)
+    {
+        foreach (Policy policy in activeSchoolPolicies)
+        {
+            if (policy.name == policyName)
+                return true;
+        }
+        return false;
+    }
+
     public bool IsAvailable(string policyName)
     {
         Policy policy = FindPolicy(policyName);
@@ -179,6 +190,7 @@ public class GameController : MonoBehaviour
                 ChangeProgress(action.Value);
             }
         }
+        activeSchoolPolicies.Add(policy);
     }
 
     /*public void StartGame()

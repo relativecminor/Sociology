@@ -46,4 +46,12 @@ public class DialogueController : MonoBehaviour
         curNode = nextNode;
         onEnteredNode(nextNode);
     }
+
+    public void UpdateDialogue()
+    {
+        Response newResponse = new Response();
+        newResponse.displayText = "Next";
+        newResponse.destinationNode = "CulturalCompetency";
+        curDialogue.GetNode("Policy").responses[0] = newResponse;
+    }
 }
