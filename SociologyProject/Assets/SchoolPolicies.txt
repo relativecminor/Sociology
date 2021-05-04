@@ -5,3 +5,15 @@ LowerGTRequirement,0,Free Lunch Program,0,0
 ChangeGTSelection,0,none,2,0
 DoAwayUniforms,0,none,1,0
 ContinueUniforms,0,none,1,0
+AdressIssue,0,none,3,0
+StrictCode,0,none,-2,500
+RequestTraining,0,Federal Cultural Competency Training,5,0
+OriginalTraining,0,none,-3,500
+AllowException,500,none,3,0
+SRO,0,none,-2,500
+FacultyInvolved,0,none,2,0
+LeavetoStudents,0,none,0,250
+MakeClub,250,none,4,0
+NoBudget,0,none,-2,0
+FootballTeam,0,none,1,0
+SmallerTeams,0,none,2,0

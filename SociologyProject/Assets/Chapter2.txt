@@ -11,8 +11,44 @@ Chapter2
 
 :: Intro[START]
 This is chapter TWO.
-Next[[NextNode]]
+Next[[Policy]]
 
-:: NextNode[END]
-Just a random next node.
+:: Policy[Policy]
+Next[[UniformA]]
+
+:: UniformA
+We’re going to need some decisions from you, Mr. Johnson.
+We received many complaints from parents about the clothes some of the girls at this school are wearing.
+It is not appropriate for a school setting, and I hope we see some stricter enforcement of the rules.
+So? What are your thoughts?
+Address the singling out of female dress code in an assembly[[AdressIssue]]
+Create a stricter dress-code for students[[StrictCode]]
+
+:: AdressIssue
+Interesting. That sounds like a good decision to me.
+Next[[CulturalCompetency]]
+
+:: StrictCode
+I’ll leave the execution in your hands!
+Next[[CulturalCompetency]]
+
+:: UniformB
+
+:: CulturalCompetency
+Hey Mr. Johnson, do you know if there’s any room for our school to request cultural competency training this year?
+I’ve been reading up on some studies recently, and I think it could really help our school.
+Request Cultural Competency Training from the state[[RequestTraining]]
+Stick with the originally planned schedule[[OriginalTraining]]
+
+:: RequestTraining
+Great! I’ll put in the request now.
+Next[[CutScene]]
+
+:: OriginalTraining
+Oh, really. I guess there’s just no room, huh?
+Next[[CutScene]]
+
+:: CutScene[END CutScene Chapter3]
+This is the cutscene
+for chapter 2
 
