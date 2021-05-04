@@ -174,7 +174,8 @@ public class DialogueViewer : MonoBehaviour
         {
             // https://answers.unity.com/questions/1271901/index-out-of-range-when-using-delegates-to-set-onc.html
             var index = responses.Count - (i + 1);
-            choices[i].GetComponent<Button>().onClick.AddListener(delegate { OnNodeSelected(index); });
+            Debug.Log("Index: " + index);
+            //choices[i].GetComponent<Button>().onClick.AddListener(delegate { OnNodeSelected(index); });
             choices[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = responses[responses.Count - (i + 1)].displayText;
             
             // TODO: Add not null assertion
