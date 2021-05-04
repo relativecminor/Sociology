@@ -25,6 +25,11 @@ public class DialogueViewer : MonoBehaviour
     public GameObject characterB;
     public GameObject characterC;
     public GameObject characterD;
+    public GameObject characterE;
+    public GameObject characterF;
+    public GameObject characterG;
+    public GameObject characterH;
+    public GameObject characterI;
     public GameObject intro;
 
     // Start is called before the first frame update
@@ -79,9 +84,9 @@ public class DialogueViewer : MonoBehaviour
         }
         else
         {
-            if (node.tags.Contains("A"))
+            if (node.tags.Contains("Character"))
             {
-                characterA.SetActive(true);
+                OpenCharacters(node);
                 Debug.Log("A");
             }
             if (node.title == "Intro")
@@ -206,6 +211,27 @@ public class DialogueViewer : MonoBehaviour
     public void ClearCharacters()
     {
         characterA.SetActive(false);
+        characterB.SetActive(false);
+        characterC.SetActive(false);
+        characterD.SetActive(false);
+        characterE.SetActive(false);
+        characterF.SetActive(false);
+        characterG.SetActive(false);
+        characterH.SetActive(false);
+        characterI.SetActive(false);
         intro.SetActive(false);
+    }
+
+    public void OpenCharacters(Node node)
+    {
+        if (node.tags.Contains("A")) { characterA.SetActive(true); }
+        if (node.tags.Contains("B")) { characterB.SetActive(true); }
+        if (node.tags.Contains("C")) { characterC.SetActive(true); }
+        if (node.tags.Contains("D")) { characterD.SetActive(true); }
+        if (node.tags.Contains("E")) { characterE.SetActive(true); }
+        if (node.tags.Contains("F")) { characterF.SetActive(true); }
+        if (node.tags.Contains("G")) { characterG.SetActive(true); }
+        if (node.tags.Contains("H")) { characterH.SetActive(true); }
+        if (node.tags.Contains("I")) { characterI.SetActive(true); }
     }
 }
