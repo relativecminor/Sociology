@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     public DialogueViewer dialogueViewer;
     public GameObject pauseMenu;
     public bool gamePaused = false;
+    public bool macLineEndings = false;
+    string delimeter = "\r\n";
 
     public List<Policy> schoolPolicies = new List<Policy>();
     [SerializeField] TextAsset policies;
@@ -44,7 +46,9 @@ public class GameController : MonoBehaviour
     {
         progress = 0;
         PolicyObject policyObject = new PolicyObject();
-        schoolPolicies = policyObject.ParsePolicies(policies);
+        
+        if (macLineEndings) { delimeter = "\n"; }
+        schoolPolicies = policyObject.ParsePolicies(policies, delimeter);
         foreach (Policy policy in schoolPolicies)
         {
             Debug.Log("Name: " + policy.name);

@@ -14,7 +14,9 @@ public class DialogueController : MonoBehaviour
     //public GameObject[] backgrounds;
     Dialogue curDialogue;
     Node curNode;
-    
+    string delimeter = "\r\n";
+    public bool macLineEndings = false;
+
 
     public delegate void NodeEnteredHandler(Node node);
     public event NodeEnteredHandler onEnteredNode;
@@ -26,7 +28,8 @@ public class DialogueController : MonoBehaviour
 
     public void InitializeDialogue(TextAsset twineText)
     {
-        curDialogue = new Dialogue(twineText);
+        if (macLineEndings) { delimeter = "\n"; }
+        curDialogue = new Dialogue(twineText, delimeter);
         curNode = curDialogue.GetStartNode();
         onEnteredNode(curNode);
     }    

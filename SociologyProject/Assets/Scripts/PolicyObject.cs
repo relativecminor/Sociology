@@ -13,10 +13,10 @@ public class PolicyObject
         public List<(string Name, int Value)> actions;
     }
 
-    public List<Policy> ParsePolicies(TextAsset textAsset)
+    public List<Policy> ParsePolicies(TextAsset textAsset, string delimeter)
     {
         string text = textAsset.text.Trim();
-        string[] policyData = text.Split(new string[] { "\n" }, StringSplitOptions.None);
+        string[] policyData = text.Split(new string[] { delimeter }, StringSplitOptions.None);
 
         List<Policy> policies = new List<Policy>();
         for (int i = 1; i < policyData.Length; i++)

@@ -48,10 +48,10 @@ public class DialogueObject
         string title;
         Dictionary<string, Node> nodes;
         string titleOfStartNode;
-        public Dialogue(TextAsset twineText)
+        public Dialogue(TextAsset twineText, string delimeter)
         {
             nodes = new Dictionary<string, Node>();
-            ParseTwineText(twineText);
+            ParseTwineText(twineText, delimeter);
         }
 
         public Node GetNode(string nodeTitle)
@@ -65,7 +65,7 @@ public class DialogueObject
             return nodes[titleOfStartNode];
         }
 
-        public void ParseTwineText(TextAsset twineText)
+        public void ParseTwineText(TextAsset twineText, string delimeter)
         {
             string text = twineText.text;
             string[] nodeData = text.Split(new string[] { "::" }, StringSplitOptions.None);
@@ -81,8 +81,8 @@ public class DialogueObject
                 // No-Tag Format: "NodeTitle \r\n Message Text \r\n [[Response One]] \r\n [[Response Two]]"
                 string currLineText = nodeData[i];
                 //Debug.Log(currLineText.IndexOf("[") + " " + currLineText.IndexOf("\n"));
-                bool tagsPresent = currLineText.IndexOf("[") < currLineText.IndexOf("\n");
-                int endOfFirstLine = currLineText.IndexOf("\n");
+                bool tagsPresent = currLineText.IndexOf("[") < currLineText.IndexOf(delimeter);
+                int endOfFirstLine = currLineText.IndexOf(delimeter);
 
                 int startOfResponses = -1;
                 int startOfResponseDestinations = currLineText.IndexOf("[[");
@@ -92,7 +92,7 @@ public class DialogueObject
                 else
                 {
                     // Last new line before "[["
-                    startOfResponses = currLineText.Substring(0, startOfResponseDestinations).LastIndexOf("\n");
+                    startOfResponses = currLineText.Substring(0, startOfResponseDestinations).LastIndexOf(delimeter);
                 }
 
                 // Extract Title
@@ -129,7 +129,7 @@ public class DialogueObject
                 curNode.responses = new List<Response>();
                 if (!lastNode)
                 {
-                    List<string> responseData = new List<string>(responseText.Split(new string[] { "\n" }, StringSplitOptions.None));
+                    List<string> responseData = new List<string>(responseText.Split(new string[] { delimeter }, StringSplitOptions.None));
                     for (int k = responseData.Count - 1; k >= 0; k--)
                     {
                         string curResponseData = responseData[k];
