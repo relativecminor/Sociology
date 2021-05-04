@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour
     private int openPolicy;
     //public DialogueController dialogueController; // Needed to start dialogue
     public GameObject mainMenu;
+    public GameObject endScreen;
+
     //public int curChapterIndex;
     //public GameObject[] chapters;
     public DialogueViewer dialogueViewer;
@@ -27,6 +29,7 @@ public class GameController : MonoBehaviour
 
     public List<Policy> schoolPolicies = new List<Policy>();
     [SerializeField] TextAsset policies;
+    // bool isPlaying = false;
 
     private void Awake()
     {
@@ -60,6 +63,7 @@ public class GameController : MonoBehaviour
 
         mainMenu.SetActive(true);
         pauseMenu.SetActive(false);
+        endScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -95,6 +99,8 @@ public class GameController : MonoBehaviour
 
         money = 0;
         progress = 0;
+
+        // isPlaying = true;
         // TODO: Reset purchased policies
     }
 
@@ -124,7 +130,13 @@ public class GameController : MonoBehaviour
     {
         gamePaused = false;
         pauseMenu.SetActive(false);
+        endScreen.SetActive(false);
         mainMenu.SetActive(true);
+    }
+
+    public void EndGame()
+    {
+        endScreen.SetActive(true);
     }
 
     public void ChangeMoney(int amount)

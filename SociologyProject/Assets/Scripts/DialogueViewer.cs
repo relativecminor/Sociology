@@ -76,7 +76,7 @@ public class DialogueViewer : MonoBehaviour
 
             backgrounds[curChapterIndex].SetActive(true);
         }
-        
+        else { GameController.Instance.EndGame(); }
     }
 
     public void OnNodeEntered(Node node)
