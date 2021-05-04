@@ -79,14 +79,14 @@ public class DialogueViewer : MonoBehaviour
         }
         else
         {
-            if (dialogueController.GetCurrentNode().tags.Contains("A"))
+            if (node.tags.Contains("A"))
             {
                 characterA.SetActive(true);
                 Debug.Log("A");
             }
-            if (dialogueController.GetCurrentNode().tags.Contains("A"))
+            if (node.title == "Intro")
             {
-                characterA.SetActive(true);
+                intro.SetActive(true);
                 Debug.Log("Intro");
             }
             passageController.InitializePassage(node);
@@ -172,9 +172,11 @@ public class DialogueViewer : MonoBehaviour
         Assert.IsTrue(choices.Length >= responses.Count);
         for (int i = 0; i < responses.Count; i++)
         {
-            //choices[i].GetComponent<Button>().onClick.AddListener(delegate { OnNodeSelected(i); });
+            https://answers.unity.com/questions/1271901/index-out-of-range-when-using-delegates-to-set-onc.html
+            var index = responses.Count - (i + 1);
+            choices[i].GetComponent<Button>().onClick.AddListener(delegate { OnNodeSelected(index); });
             choices[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = responses[responses.Count - (i + 1)].displayText;
-
+            
             // TODO: Add not null assertion
             if (!GameController.Instance.IsAvailable(responses[responses.Count - (i + 1)].destinationNode))
             {
