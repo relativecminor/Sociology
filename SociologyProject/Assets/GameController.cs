@@ -142,7 +142,7 @@ public class GameController : MonoBehaviour
     public void ChangeMoney(int amount)
     {
         money += amount;
-        moneyTextBox.GetComponent<TextMeshProUGUI>().text = "Money: " + money.ToString();
+        moneyTextBox.GetComponent<TextMeshProUGUI>().text = money.ToString();
     }
 
     public void ChangeProgress(int amount)

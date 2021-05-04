@@ -13,6 +13,7 @@ public class DialogueBoxController : MonoBehaviour
     public GameObject dialogueBox;
     public GameObject textBox;
     public GameObject policyButton;
+    private AudioSource nextSound;
 
     private Coroutine dialogueCo;
 
@@ -25,6 +26,7 @@ public class DialogueBoxController : MonoBehaviour
     void Start()
     {
         dialogueAnimator = gameObject.GetComponent<Animator>();
+        nextSound = gameObject.GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -59,7 +61,10 @@ public class DialogueBoxController : MonoBehaviour
         CloseBox();
     }
 
-    
+    public void Next()
+    {
+        nextSound.Play();
+    }
 
     IEnumerator typeText(string text)
     {
