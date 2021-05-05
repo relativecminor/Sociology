@@ -10,7 +10,10 @@ Chapter4
 
 
 :: Intro[START]
-This is chapter FOUR.
+Welcome to Chapter 4.
+You are now playing as the Student Activities Coordinator at Rock Creek University.
+It is your job to create events and spaces for the students.
+Even though you are not in the administration you still play an important role in student life.
 Next[[Policy]]
 
 :: Policy[Policy]

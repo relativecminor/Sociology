@@ -10,7 +10,10 @@ Chapter3
 
 
 :: Intro[START]
-This is chapter THREE.
+Welcome to Chapter 3.
+You are now playing as the Superintendent Rock Creek School District.
+You will be making larger, more executive decisions for the district.
+As you move higher up the ladder don’t forget that your job is to help the students succeed.
 Next[[Policy]]
 
 :: Policy[Policy]

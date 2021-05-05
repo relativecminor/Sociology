@@ -10,7 +10,10 @@ Chapter2
 
 
 :: Intro[START]
-This is chapter TWO.
+Welcome to Chapter 2.
+You are now playing as a student coordinator for Rock Creek Middle School.
+It is your job to communicate with the faculty. 
+Your voice and opinions will be heard and taken into serious consideration.
 Next[[Policy]]
 
 :: Policy[Policy]
