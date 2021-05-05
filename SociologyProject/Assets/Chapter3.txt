@@ -13,7 +13,7 @@ Chapter3
 Welcome to Chapter 3.
 You are now playing as the Superintendent for Rock Creek School District.
 You will be making larger, more executive decisions for the district.
-As you move higher up the ladder don’t forget that your job is to help the students succeed.
+As you move higher up the ladder don't forget that your job is to help the students succeed.
 Next[[Policy]]
 
 :: Policy[Policy]
@@ -24,33 +24,33 @@ Mrs. Williams, do you have a moment?
 State legislature passed allowing us to station a school resource officer in all high schools.
 These officers have really helped with discipline in the past.
 However, there is a school requesting a counselor instead.
-We wouldn’t be able to hire that counselor with money from the bill. Should we give them the funding?
+We wouldn't be able to hire that counselor with money from the bill. Should we give them the funding?
 Allow the exception for the school[[AllowException]]
 Stick to the plan, send an SRO[[SRO]]
 
 :: AllowException
-Yes ma’am, we will follow through with your plan. Take care.
+Yes ma'am, we will follow through with your plan. Take care.
 Next[[PoliticalDiscussions]]
 
 :: SRO
-Yes ma’am, we will follow through with your plan. Take care.
+Yes ma'am, we will follow through with your plan. Take care.
 Next[[PoliticalDiscussions]]
 
 :: PoliticalDiscussions[Character C]
 Mrs. Williams, I wanted to stop you and ask your advice about something.
-It has come to my attention recently that there is a group of students protesting the theme of one of this years’ fun dress-up days before homecoming.
-The student government this year set the last day to be ‘Freedom Friday’ but there is a group of students saying that they don’t feel included.
+It has come to my attention recently that there is a group of students protesting the theme of one of this years' fun dress-up days before homecoming.
+The student government this year set the last day to be 'Freedom Friday' but there is a group of students saying that they don't feel included.
 Do you think this should require faculty involvement, or should this be something I leave to the student government who introduced it?
 Get the faculty involved[[FacultyInvolved]]
 Leave it to the students[[LeavetoStudents]]
 
-:: FacultyInvolved
-I always appreciate your advice. I’ll take it into account.
+:: FacultyInvolved[PreCutScene]
+I always appreciate your advice. I'll take it into account.
 Have a good rest of your day.
 Next[[CutSceneNeutral]]
 
-:: LeavetoStudents
-I always appreciate your advice. I’ll take it into account.
+:: LeavetoStudents[PreCutScene]
+I always appreciate your advice. I'll take it into account.
 Have a good rest of your day.
 Next[[CutSceneNeutral]]
 
@@ -59,8 +59,8 @@ I wish that the school had more AP classes.
 Though if they did would I even want to take them lol!
 
 :: CutScenePoor[END CutScene Chapter4]
-I don’t understand why this school ever hired half these people.
-You’re not educating me, you’re just babysitting me!
+I don't understand why this school ever hired half these people.
+You're not educating me, you're just babysitting me!
 #done #tiredofthis
 
 :: CutSceneGood[END CutScene Chapter4]

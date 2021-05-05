@@ -65,15 +65,15 @@ public class PolicyManager : MonoBehaviour
         "9"
     };
     private string[] policyDescription = new string[] {
-        "The government pays for free lunches for public schools",
-        "Bus routes have a longer reach to pick up kids living further from schools",
-        "Allows public money to follow students to private schools",
-        "Provides financial support for students pursuing higher education based on need.",
-        "Establish an Office of Civil Rights in the CTE that works to close the discrimination gap in STEM fields.",
-        "Allow for publicly funded schools that draw students from a variety of school districts under a specialized curriculum.",
-        "A government funded program that will support schools with cultural competency training should they request it.",
-        "Require all schools to follow the guidelines of Title IX relating to discrimination based on sex.",
-        "Fund schools to host programs for students who may not be able to return home immediately after school.",
+        "The government pays for free lunches for public schools. \n \nCost: 2000",
+        "Bus routes have a longer reach to pick up kids living further from schools. \n \nCost: 1500",
+        "Allows public money to follow students to private schools. \n \nCost: 1000",
+        "Provides financial support for students pursuing higher education based on need. \n \nCost: 1500",
+        "Establish an Office of Civil Rights in the CTE that works to close the discrimination gap in STEM fields. \n \nCost: 2000",
+        "Allow for publicly funded schools that draw students from a variety of school districts under a special curriculum. \n \nCost: 2000",
+        "A government funded program that will support schools with cultural competency training should they request it. \n \nCost: 2000",
+        "Require all schools to follow the guidelines of Title IX relating to discrimination based on sex. \n \nCost: 1500",
+        "Fund schools to host programs for students who may not be able to return home immediately after school. \n \nCost: 1000",
     // school policies 
      "Give your school a School Resource Officer (SRO)",
         "Enact a dress code policy",

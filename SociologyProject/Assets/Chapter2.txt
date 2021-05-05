@@ -20,7 +20,7 @@ Next[[Policy]]
 Next[[UniformA]]
 
 :: UniformA[Character D]
-We’re going to need some decisions from you, Mr. Johnson.
+We're going to need some decisions from you, Mr. Johnson.
 We received many complaints from parents about the clothes some of the girls at this school are wearing.
 It is not appropriate for a school setting, and I hope we see some stricter enforcement of the rules.
 So? What are your thoughts?
@@ -32,11 +32,11 @@ Interesting. That sounds like a good decision to me.
 Next[[CulturalCompetency]]
 
 :: StrictCode
-I’ll leave the execution in your hands!
+I'll leave the execution in your hands!
 Next[[CulturalCompetency]]
 
 :: UniformB[Character D]
-Mr. Johnson! We can’t be cutting so much slack for students who come to school without a proper uniform.
+Mr. Johnson! We can't be cutting so much slack for students who come to school without a proper uniform.
 I know you work closely with the parents and students, so I need you to find a solution that upholds the pride of our school.
 Allow uniform purchases through voucher system[[Vouchers]]
 Issue suspensions to students without uniforms[[Suspensions]]
@@ -50,17 +50,17 @@ See to it that it works
 Next[[CulturalCompetency]]
 
 :: CulturalCompetency[Character E]
-Hey Mr. Johnson, do you know if there’s any room for our school to request cultural competency training this year?
-I’ve been reading up on some studies recently, and I think it could really help our school.
+Hey Mr. Johnson, do you know if there's any room for our school to request cultural competency training this year?
+I've been reading up on some studies recently, and I think it could really help our school.
 Request Cultural Competency Training[[RequestTraining]]
 Stick with the originally planned schedule[[OriginalTraining]]
 
-:: RequestTraining
-Great! I’ll put in the request now.
+:: RequestTraining[PreCutScene]
+Great! I'll put in the request now.
 Next[[CutSceneNeutral]]
 
-:: OriginalTraining
-Oh, really. I guess there’s just no room, huh?
+:: OriginalTraining[PreCutScene]
+Oh, really. I guess there's just no room, huh?
 Next[[CutSceneNeutral]]
 
 :: CutSceneNeutral[END CutScene Chapter3]

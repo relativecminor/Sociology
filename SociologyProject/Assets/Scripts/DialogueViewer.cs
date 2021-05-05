@@ -32,6 +32,14 @@ public class DialogueViewer : MonoBehaviour
     public GameObject characterI;
     public GameObject intro;
 
+    public GameObject postIntro;
+    public GameObject post1PN;
+    public GameObject post1G;
+    public GameObject post2PNG;
+    public GameObject post3PNG;
+    public GameObject post4PN;
+    public GameObject post4G;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,7 +91,8 @@ public class DialogueViewer : MonoBehaviour
     {                
         if (node.tags.Contains("PreCutScene"))
         {
-
+            ClearPosts();
+            Debug.Log("Chapter Index: " + curChapterIndex);
             //dialogueController.GetCurrentDialogue().GetNode()
             if (GameController.Instance.progress <3)
             {
@@ -92,6 +101,22 @@ public class DialogueViewer : MonoBehaviour
                 newResponse.destinationNode = "CutScenePoor";
                 node.responses[0] = newResponse;
                 // curChapterIndex
+                if (curChapterIndex == 0)
+                {
+                    post1PN.SetActive(true);
+                }
+                else if (curChapterIndex == 1)
+                {
+                    post2PNG.SetActive(true);
+                }
+                else if (curChapterIndex == 2)
+                {
+                    post3PNG.SetActive(true);
+                }
+                else
+                {
+                    post4PN.SetActive(true);
+                }
             }
             else if (GameController.Instance.progress < 6)
             {
@@ -99,6 +124,22 @@ public class DialogueViewer : MonoBehaviour
                 newResponse.displayText = "Next";
                 newResponse.destinationNode = "CutSceneNeutral";
                 node.responses[0] = newResponse;
+                if (curChapterIndex == 0)
+                {
+                    post1PN.SetActive(true);
+                }
+                else if (curChapterIndex == 1)
+                {
+                    post2PNG.SetActive(true);
+                }
+                else if (curChapterIndex == 2)
+                {
+                    post3PNG.SetActive(true);
+                }
+                else
+                {
+                    post4PN.SetActive(true);
+                }
             }
             else
             {
@@ -106,6 +147,22 @@ public class DialogueViewer : MonoBehaviour
                 newResponse.displayText = "Next";
                 newResponse.destinationNode = "CutSceneGood";
                 node.responses[0] = newResponse;
+                if (curChapterIndex == 0)
+                {
+                    post1G.SetActive(true);
+                }
+                else if (curChapterIndex == 1)
+                {
+                    post2PNG.SetActive(true);
+                }
+                else if (curChapterIndex == 2)
+                {
+                    post3PNG.SetActive(true);
+                }
+                else
+                {
+                    post4G.SetActive(true);
+                }
             }
         }
         if (node.tags.Contains("Policy"))
@@ -266,5 +323,16 @@ public class DialogueViewer : MonoBehaviour
         if (node.tags.Contains("G")) { characterG.SetActive(true); }
         if (node.tags.Contains("H")) { characterH.SetActive(true); }
         if (node.tags.Contains("I")) { characterI.SetActive(true); }
+    }
+
+    public void ClearPosts()
+    {
+        postIntro.SetActive(false);
+        post1PN.SetActive(false);
+        post1G.SetActive(false);
+        post2PNG.SetActive(false);
+        post3PNG.SetActive(false);
+        post4PN.SetActive(false);
+        post4G.SetActive(false);
     }
 }
