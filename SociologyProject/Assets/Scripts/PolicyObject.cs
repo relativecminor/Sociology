@@ -50,9 +50,11 @@ public class PolicyObject
             string feedback = "";
             if (policyDetails.Length > 5)
             {
-                policy.feedback = policyDetails[5];
+                feedback = policyDetails[5];
+                
             }
             policy.feedback = feedback;
+            Debug.Log("Assigned feedback: " + policy.feedback);
 
             policies.Add(policy);
         }

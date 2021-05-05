@@ -40,6 +40,8 @@ public class DialogueViewer : MonoBehaviour
     public GameObject post4PN;
     public GameObject post4G;
 
+    public GameObject[] feedbackButtons;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -272,16 +274,35 @@ public class DialogueViewer : MonoBehaviour
             Debug.Log("Index: " + index);
             //choices[i].GetComponent<Button>().onClick.AddListener(delegate { OnNodeSelected(index); });
             choices[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = responses[responses.Count - (i + 1)].displayText;
-            
+
+
+            /*
             // TODO: Add not null assertion
             if (!GameController.Instance.IsAvailable(responses[responses.Count - (i + 1)].destinationNode))
             {
                 choices[i].GetComponent<Button>().interactable = false;
+            }*/
+            string policyName = responses[responses.Count - (i + 1)].destinationNode;
+            Policy policy = GameController.Instance.FindPolicy(policyName);
+
+            if (!GameController.Instance.IsAvailable(policyName))
+            {
+                choices[i].GetComponent<Button>().interactable = false;
+                if (policy.feedback != "")
+                {
+                    feedbackButtons[i].SetActive(true);
+                    feedbackButtons[i].GetComponent<Feedback>().text = policy.feedback;
+                }
+                
             }
             else
             {
                 choices[i].GetComponent<Button>().interactable = true;
-
+                /*if (policy.feedback != "")
+                {
+                    feedbackButtons[i].SetActive(true);
+                    feedbackButtons[i].GetComponent<Feedback>().text = policy.feedback;
+                }*/
             }
             choices[i].SetActive(true);
 
@@ -295,7 +316,11 @@ public class DialogueViewer : MonoBehaviour
             button.SetActive(false);
             
         }
-        
+        foreach (GameObject button in feedbackButtons)
+        {
+            button.SetActive(false);
+
+        }
     }
 
     public void ClearCharacters()
