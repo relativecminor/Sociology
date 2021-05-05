@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 186230871}
   - component: {fileID: 186230870}
   m_Layer: 5
-  m_Name: PolicyA (2)
+  m_Name: Policy6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2210,7 +2210,7 @@ GameObject:
   - component: {fileID: 532453095}
   - component: {fileID: 532453096}
   m_Layer: 5
-  m_Name: PolicyC
+  m_Name: Policy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2991,7 +2991,7 @@ GameObject:
   - component: {fileID: 859344006}
   - component: {fileID: 859344005}
   m_Layer: 5
-  m_Name: PolicyA (1)
+  m_Name: Policy3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3150,7 +3150,7 @@ GameObject:
   - component: {fileID: 878765060}
   - component: {fileID: 878765059}
   m_Layer: 5
-  m_Name: PolicyC (2)
+  m_Name: Policy8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3678,6 +3678,7 @@ MonoBehaviour:
   moneyTextBox: {fileID: 0}
   money: 0
   mainMenu: {fileID: 0}
+  endScreen: {fileID: 0}
   dialogueViewer: {fileID: 0}
   pauseMenu: {fileID: 0}
   gamePaused: 0
@@ -3845,7 +3846,7 @@ GameObject:
   - component: {fileID: 1192641553}
   - component: {fileID: 1192641552}
   m_Layer: 5
-  m_Name: PolicyC (1)
+  m_Name: Policy5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4418,6 +4419,15 @@ MonoBehaviour:
   moneyTextBox: {fileID: 2107462813}
   money: 10000
   policyTextBox: {fileID: 1554307825}
+  policy0: {fileID: 1971212953}
+  policy1: {fileID: 1925526504}
+  policy2: {fileID: 532453093}
+  policy3: {fileID: 859344003}
+  policy4: {fileID: 1771359814}
+  policy5: {fileID: 1192641550}
+  policy6: {fileID: 186230868}
+  policy7: {fileID: 1430986635}
+  policy8: {fileID: 878765057}
 --- !u!4 &1315135949
 Transform:
   m_ObjectHideFlags: 0
@@ -4579,7 +4589,7 @@ GameObject:
   - component: {fileID: 1430986638}
   - component: {fileID: 1430986637}
   m_Layer: 5
-  m_Name: PolicyB (2)
+  m_Name: Policy7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5537,7 +5547,7 @@ GameObject:
   - component: {fileID: 1771359817}
   - component: {fileID: 1771359816}
   m_Layer: 5
-  m_Name: PolicyB (1)
+  m_Name: Policy4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6038,7 +6048,7 @@ GameObject:
   - component: {fileID: 1925526507}
   - component: {fileID: 1925526506}
   m_Layer: 5
-  m_Name: PolicyB
+  m_Name: Policy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6354,7 +6364,7 @@ GameObject:
   - component: {fileID: 1971212956}
   - component: {fileID: 1971212955}
   m_Layer: 5
-  m_Name: PolicyA
+  m_Name: Policy0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

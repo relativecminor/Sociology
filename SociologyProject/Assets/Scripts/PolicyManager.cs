@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using static PolicyObject;
+using UnityEngine.UI;
 
 public class PolicyManager : MonoBehaviour
 {
@@ -20,11 +20,12 @@ public class PolicyManager : MonoBehaviour
     private Coroutine dialogueCo;
 
     private int openPolicy;
+    public GameObject[] policyButtons;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class PolicyManager : MonoBehaviour
 
         }
     }
+    
     private string[] policyTitle = new string[] {
         "Free Lunch Program",
         "Extended Bus Routes",
@@ -134,6 +136,7 @@ public class PolicyManager : MonoBehaviour
         {
             money += (policyCost[openPolicy] * -1);
             policyPurchased[openPolicy] = true;
+            policyButtons[openPolicy].GetComponent<Image>().color = Color.white;
             Debug.Log("Purchased Policy " + openPolicy);
         }
     }
