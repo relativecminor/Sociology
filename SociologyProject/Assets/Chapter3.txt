@@ -47,14 +47,25 @@ Leave it to the students[[LeavetoStudents]]
 :: FacultyInvolved
 I always appreciate your advice. I’ll take it into account.
 Have a good rest of your day.
-Next[[CutScene]]
+Next[[CutSceneNeutral]]
 
 :: LeavetoStudents
 I always appreciate your advice. I’ll take it into account.
 Have a good rest of your day.
-Next[[CutScene]]
+Next[[CutSceneNeutral]]
 
-:: CutScene[END CutScene Chapter4]
-This is the cutscene
-for chapter 3
+:: CutSceneNeutral[END CutScene Chapter4]
+I wish that the school had more AP classes.
+Though if they did would I even want to take them lol!
+
+:: CutScenePoor[END CutScene Chapter4]
+I don’t understand why this school ever hired half these people.
+You’re not educating me, you’re just babysitting me!
+#done #tiredofthis
+
+:: CutSceneGood[END CutScene Chapter4]
+Mrs. Wilson asked me what I wanted to do after high school.
+I told her that I wanted to keep learning
+and she talked to me about options.
+Shoutout Mrs. W #bestteacher
 
