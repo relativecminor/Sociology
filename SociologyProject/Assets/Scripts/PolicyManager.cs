@@ -166,7 +166,12 @@ public class PolicyManager : MonoBehaviour
         policyTextBox.GetComponent<TextMeshProUGUI>().text = "";
         foreach (char c in text.ToCharArray())
         {
+
             policyTextBox.GetComponent<TextMeshProUGUI>().text += c;
+            while (GameController.Instance.gamePaused)
+            {
+                yield return null;
+            }
             yield return new WaitForSeconds(.03f);
         }
     }

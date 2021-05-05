@@ -52,7 +52,7 @@ Next[[CulturalCompetency]]
 :: CulturalCompetency[Character E]
 Hey Mr. Johnson, do you know if there’s any room for our school to request cultural competency training this year?
 I’ve been reading up on some studies recently, and I think it could really help our school.
-Request Cultural Competency Training from the state[[RequestTraining]]
+Request Cultural Competency Training[[RequestTraining]]
 Stick with the originally planned schedule[[OriginalTraining]]
 
 :: RequestTraining

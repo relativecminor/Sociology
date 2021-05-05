@@ -24,7 +24,7 @@ Hi Parker, do you have a moment? When I was in High School we had a club called 
 It was a really great place for me to talk to other students of color, and I was really hoping to join something similar when I came here.
 I don’t feel like it’s something I can start myself. Is there anything you could do?
 Let’s make this club![[MakeClub]]
-It looks like there’s currently not room in the budget[[NoBudget]]
+There’s currently not room in the budget[[NoBudget]]
 
 :: MakeClub
 Thanks so much! I’ll be sure to join.
