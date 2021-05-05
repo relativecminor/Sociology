@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class PolicyManager : MonoBehaviour
     public Canvas dialogueCanvas;
 
     public GameObject moneyTextBox;
-    public int money;
+    //public int money;
 
     public GameObject policyTextBox;
     private Coroutine dialogueCo;
@@ -104,14 +105,14 @@ public class PolicyManager : MonoBehaviour
         0,
         0,
         0};
-    private bool[] policyPurchased = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
+    public bool[] policyPurchased = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
 
     public string getPolicyTitle(int policyNumber) { return policyTitle[policyNumber]; }
     public string getPolicyDescription(int policyNumber) { return policyDescription[policyNumber]; }
     public int getPolicyCost(int policyNumber) { return policyCost[policyNumber]; }
     public bool getPolicyPurchased(int policyNumber) { return policyPurchased[policyNumber]; }
 
-    public void printPolicyPurchased(int policyNumber) { Debug.Log(policyPurchased[policyNumber]); }
+    //public void printPolicyPurchased(int policyNumber) { Debug.Log(policyPurchased[policyNumber]); }
 
 
     public void OpenPolicy()
@@ -132,9 +133,9 @@ public class PolicyManager : MonoBehaviour
 
     public void purchasePolicy()
     {
-        if (money >= policyCost[openPolicy] && !policyPurchased[openPolicy])
+        if (GameController.Instance.money >= policyCost[openPolicy] && !policyPurchased[openPolicy])
         {
-            money += (policyCost[openPolicy] * -1);
+            GameController.Instance.ChangeMoney(policyCost[openPolicy] * -1);
             policyPurchased[openPolicy] = true;
             policyButtons[openPolicy].GetComponent<Image>().color = Color.white;
             Debug.Log("Purchased Policy " + openPolicy);
@@ -161,11 +162,17 @@ public class PolicyManager : MonoBehaviour
 
     IEnumerator typeText(string text)
     {
+        Debug.Log(text);
         policyTextBox.GetComponent<TextMeshProUGUI>().text = "";
         foreach (char c in text.ToCharArray())
         {
             policyTextBox.GetComponent<TextMeshProUGUI>().text += c;
             yield return new WaitForSeconds(.03f);
         }
+    }
+    public bool IsActive(string title)
+    {
+        Debug.Log(title);
+        return policyPurchased[Array.IndexOf(policyTitle, title)];
     }
 }

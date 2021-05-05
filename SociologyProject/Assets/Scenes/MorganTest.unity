@@ -775,7 +775,6 @@ GameObject:
   - component: {fileID: 186230869}
   - component: {fileID: 186230873}
   - component: {fileID: 186230872}
-  - component: {fileID: 186230871}
   - component: {fileID: 186230870}
   m_Layer: 5
   m_Name: Policy6
@@ -871,20 +870,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &186230871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186230868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policyIndex: 6
-  policyTextBox: {fileID: 1554307825}
 --- !u!114 &186230872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2208,7 +2193,6 @@ GameObject:
   - component: {fileID: 532453098}
   - component: {fileID: 532453097}
   - component: {fileID: 532453095}
-  - component: {fileID: 532453096}
   m_Layer: 5
   m_Name: Policy2
   m_TagString: Untagged
@@ -2303,20 +2287,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &532453096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532453093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policyIndex: 2
-  policyTextBox: {fileID: 1554307825}
 --- !u!114 &532453097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,7 +2958,6 @@ GameObject:
   - component: {fileID: 859344004}
   - component: {fileID: 859344008}
   - component: {fileID: 859344007}
-  - component: {fileID: 859344006}
   - component: {fileID: 859344005}
   m_Layer: 5
   m_Name: Policy3
@@ -3084,20 +3053,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &859344006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859344003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policyIndex: 3
-  policyTextBox: {fileID: 1554307825}
 --- !u!114 &859344007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3147,7 +3102,6 @@ GameObject:
   - component: {fileID: 878765058}
   - component: {fileID: 878765062}
   - component: {fileID: 878765061}
-  - component: {fileID: 878765060}
   - component: {fileID: 878765059}
   m_Layer: 5
   m_Name: Policy8
@@ -3243,20 +3197,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &878765060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878765057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policyIndex: 8
-  policyTextBox: {fileID: 1554307825}
 --- !u!114 &878765061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3843,7 +3783,6 @@ GameObject:
   - component: {fileID: 1192641551}
   - component: {fileID: 1192641555}
   - component: {fileID: 1192641554}
-  - component: {fileID: 1192641553}
   - component: {fileID: 1192641552}
   m_Layer: 5
   m_Name: Policy5
@@ -3939,20 +3878,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1192641553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192641550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policyIndex: 5
-  policyTextBox: {fileID: 1554307825}
 --- !u!114 &1192641554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4419,15 +4344,16 @@ MonoBehaviour:
   moneyTextBox: {fileID: 2107462813}
   money: 10000
   policyTextBox: {fileID: 1554307825}
-  policy0: {fileID: 1971212953}
-  policy1: {fileID: 1925526504}
-  policy2: {fileID: 532453093}
-  policy3: {fileID: 859344003}
-  policy4: {fileID: 1771359814}
-  policy5: {fileID: 1192641550}
-  policy6: {fileID: 186230868}
-  policy7: {fileID: 1430986635}
-  policy8: {fileID: 878765057}
+  policyButtons:
+  - {fileID: 1971212953}
+  - {fileID: 1925526504}
+  - {fileID: 532453093}
+  - {fileID: 859344003}
+  - {fileID: 1771359814}
+  - {fileID: 1192641550}
+  - {fileID: 186230868}
+  - {fileID: 1430986635}
+  - {fileID: 878765057}
 --- !u!4 &1315135949
 Transform:
   m_ObjectHideFlags: 0
@@ -4586,7 +4512,6 @@ GameObject:
   - component: {fileID: 1430986636}
   - component: {fileID: 1430986640}
   - component: {fileID: 1430986639}
-  - component: {fileID: 1430986638}
   - component: {fileID: 1430986637}
   m_Layer: 5
   m_Name: Policy7
@@ -4682,20 +4607,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1430986638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430986635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policyIndex: 7
-  policyTextBox: {fileID: 1554307825}
 --- !u!114 &1430986639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5544,7 +5455,6 @@ GameObject:
   - component: {fileID: 1771359815}
   - component: {fileID: 1771359819}
   - component: {fileID: 1771359818}
-  - component: {fileID: 1771359817}
   - component: {fileID: 1771359816}
   m_Layer: 5
   m_Name: Policy4
@@ -5640,20 +5550,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1771359817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771359814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policyIndex: 4
-  policyTextBox: {fileID: 1554307825}
 --- !u!114 &1771359818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6046,7 +5942,6 @@ GameObject:
   - component: {fileID: 1925526509}
   - component: {fileID: 1925526508}
   - component: {fileID: 1925526507}
-  - component: {fileID: 1925526506}
   m_Layer: 5
   m_Name: Policy1
   m_TagString: Untagged
@@ -6073,20 +5968,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 188}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1925526506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925526504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policyIndex: 1
-  policyTextBox: {fileID: 1554307825}
 --- !u!114 &1925526507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6362,7 +6243,6 @@ GameObject:
   - component: {fileID: 1971212958}
   - component: {fileID: 1971212957}
   - component: {fileID: 1971212956}
-  - component: {fileID: 1971212955}
   m_Layer: 5
   m_Name: Policy0
   m_TagString: Untagged
@@ -6389,20 +6269,6 @@ RectTransform:
   m_AnchoredPosition: {x: -175, y: 188}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1971212955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971212953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policyIndex: 0
-  policyTextBox: {fileID: 1554307825}
 --- !u!114 &1971212956
 MonoBehaviour:
   m_ObjectHideFlags: 0

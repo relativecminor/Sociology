@@ -185,7 +185,7 @@ public class GameController : MonoBehaviour
     {
         foreach (string condition in policy.requires)
         {
-            if (!IsActive(condition)) { return false; }
+            if (!PolicyManager.Instance.IsActive(condition)) { return false; }
         }
         return true;
     }
@@ -309,9 +309,9 @@ public class GameController : MonoBehaviour
     private bool[] policyPurchased = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
 
 
-    public bool IsActive(string title)
-    {
-        Debug.Log(title);
-        return policyPurchased[Array.IndexOf(policyTitle, title)];
-    }
+    //public bool IsActive(string title)
+    //{
+     //   Debug.Log(title);
+    //    return policyPurchased[Array.IndexOf(policyTitle, title)];
+   // }
 }
