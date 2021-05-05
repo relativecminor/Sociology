@@ -2496,7 +2496,7 @@ MonoBehaviour:
   dialogueViewer: {fileID: 1288752450}
   pauseMenu: {fileID: 2048177232}
   gamePaused: 0
-  macLineEndings: 1
+  macLineEndings: 0
   policies: {fileID: 4900000, guid: c531362879a15405eb7eeb633e672f4e, type: 3}
 --- !u!1 &612034707
 GameObject:
@@ -8156,7 +8156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9125839330140ed8297fd98594b7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  macLineEndings: 1
+  macLineEndings: 0
 --- !u!4 &1288752449
 Transform:
   m_ObjectHideFlags: 0
@@ -9816,6 +9816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 0
   policyTextBox: {fileID: 1775441139}
 --- !u!114 &1628082547
 MonoBehaviour:

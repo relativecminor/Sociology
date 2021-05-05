@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PolicyText : MonoBehaviour
 {
-
+    public int policyIndex;
     public GameObject policyTextBox;
     private Coroutine dialogueCo;
 
@@ -22,12 +22,11 @@ public class PolicyText : MonoBehaviour
         
     }
 
-    public void PolicyClicked(int policyNumber)
+    public void PolicyClicked()
     {
-        Debug.Log(policyNumber);
-        StartDialogue(PolicyManager.Instance.getPolicyDescription(policyNumber));
-        //StartDialogue(GameManager.Instance.getPolicyDescription(policyNumber));
-        Debug.Log("hey I know the Policy Number: " + policyNumber);
+        Debug.Log(policyIndex);
+        StartDialogue(PolicyManager.Instance.getPolicyDescription(policyIndex));
+        Debug.Log("hey I know the Policy Number: " + policyIndex);
     }
 
     IEnumerator typeText(string text)
@@ -47,10 +46,10 @@ public class PolicyText : MonoBehaviour
         dialogueCo = StartCoroutine(typeText(text));
     }
 
-    public void PolicyPurchased(int policyNumber)
+    public void PolicyPurchased()
     {
         //if (GameManager.Instance.getPolicyPurchased(policyNumber))
-        if (PolicyManager.Instance.getPolicyPurchased(policyNumber))
+        if (PolicyManager.Instance.getPolicyPurchased(policyIndex))
         {
             this.GetComponent<Image>().color = Color.white;
         }

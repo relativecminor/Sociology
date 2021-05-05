@@ -847,8 +847,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1747590305}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: activePolicy
         m_Mode: 3
         m_Arguments:
@@ -859,26 +859,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 186230871}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: PolicyClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 6
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 186230871}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
-        m_MethodName: PolicyPurchased
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -895,6 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 6
   policyTextBox: {fileID: 1554307825}
 --- !u!114 &186230872
 MonoBehaviour:
@@ -2218,8 +2207,8 @@ GameObject:
   - component: {fileID: 532453094}
   - component: {fileID: 532453098}
   - component: {fileID: 532453097}
-  - component: {fileID: 532453096}
   - component: {fileID: 532453095}
+  - component: {fileID: 532453096}
   m_Layer: 5
   m_Name: PolicyC
   m_TagString: Untagged
@@ -2290,8 +2279,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1747590305}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: activePolicy
         m_Mode: 3
         m_Arguments:
@@ -2302,26 +2291,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 532453096}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: PolicyClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 532453096}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
-        m_MethodName: PolicyPurchased
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2338,6 +2315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 2
   policyTextBox: {fileID: 1554307825}
 --- !u!114 &532453097
 MonoBehaviour:
@@ -3082,8 +3060,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1747590305}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: activePolicy
         m_Mode: 3
         m_Arguments:
@@ -3094,26 +3072,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 859344006}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: PolicyClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 859344006}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
-        m_MethodName: PolicyPurchased
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3130,6 +3096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 3
   policyTextBox: {fileID: 1554307825}
 --- !u!114 &859344007
 MonoBehaviour:
@@ -3252,8 +3219,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1747590305}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: activePolicy
         m_Mode: 3
         m_Arguments:
@@ -3264,26 +3231,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 878765060}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: PolicyClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 8
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 878765060}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
-        m_MethodName: PolicyPurchased
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3300,6 +3255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 8
   policyTextBox: {fileID: 1554307825}
 --- !u!114 &878765061
 MonoBehaviour:
@@ -3725,6 +3681,7 @@ MonoBehaviour:
   dialogueViewer: {fileID: 0}
   pauseMenu: {fileID: 0}
   gamePaused: 0
+  macLineEndings: 0
   policies: {fileID: 0}
 --- !u!4 &1111471109
 Transform:
@@ -3957,8 +3914,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1747590305}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: activePolicy
         m_Mode: 3
         m_Arguments:
@@ -3969,26 +3926,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1192641553}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: PolicyClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1192641553}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
-        m_MethodName: PolicyPurchased
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4005,6 +3950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 5
   policyTextBox: {fileID: 1554307825}
 --- !u!114 &1192641554
 MonoBehaviour:
@@ -4471,6 +4417,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 5477621}
   moneyTextBox: {fileID: 2107462813}
   money: 10000
+  policyTextBox: {fileID: 1554307825}
 --- !u!4 &1315135949
 Transform:
   m_ObjectHideFlags: 0
@@ -4701,8 +4648,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1747590305}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: activePolicy
         m_Mode: 3
         m_Arguments:
@@ -4713,26 +4660,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1430986638}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: PolicyClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 7
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1430986638}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
-        m_MethodName: PolicyPurchased
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4749,6 +4684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 7
   policyTextBox: {fileID: 1554307825}
 --- !u!114 &1430986639
 MonoBehaviour:
@@ -5670,8 +5606,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1747590305}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: activePolicy
         m_Mode: 3
         m_Arguments:
@@ -5682,26 +5618,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1771359817}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: PolicyClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1771359817}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
-        m_MethodName: PolicyPurchased
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5718,6 +5642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 4
   policyTextBox: {fileID: 1554307825}
 --- !u!114 &1771359818
 MonoBehaviour:
@@ -6150,6 +6075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 1
   policyTextBox: {fileID: 1554307825}
 --- !u!114 &1925526507
 MonoBehaviour:
@@ -6195,8 +6121,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1925526506}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
+        m_MethodName: activePolicy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: PolicyClicked
         m_Mode: 3
         m_Arguments:
@@ -6453,6 +6391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711cc242bd32e546b7ac68eb3e8951c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  policyIndex: 0
   policyTextBox: {fileID: 1554307825}
 --- !u!114 &1971212956
 MonoBehaviour:
@@ -6498,18 +6437,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1971212955}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
-        m_MethodName: PolicyClicked
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1315135948}
         m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
         m_MethodName: activePolicy
@@ -6522,9 +6449,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1971212955}
-        m_TargetAssemblyTypeName: PolicyText, Assembly-CSharp
-        m_MethodName: PolicyPurchased
+      - m_Target: {fileID: 1315135948}
+        m_TargetAssemblyTypeName: PolicyManager, Assembly-CSharp
+        m_MethodName: PolicyClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -16,6 +16,9 @@ public class PolicyManager : MonoBehaviour
     public GameObject moneyTextBox;
     public int money;
 
+    public GameObject policyTextBox;
+    private Coroutine dialogueCo;
+
     private int openPolicy;
 
     // Start is called before the first frame update
@@ -138,5 +141,28 @@ public class PolicyManager : MonoBehaviour
     public void activePolicy(int policyNumber)
     {
         openPolicy = policyNumber;
+    }
+
+    public void PolicyClicked(int policyNumber)
+    {
+        StartDialogue(getPolicyDescription(policyNumber));
+        Debug.Log("hey I know the Policy Number: " + policyNumber);
+    }
+
+    public void StartDialogue(string text)
+    {
+        StopAllCoroutines();
+        //GameController.Instance.StopAllCoroutines();
+        dialogueCo = StartCoroutine(typeText(text));
+    }
+
+    IEnumerator typeText(string text)
+    {
+        policyTextBox.GetComponent<TextMeshProUGUI>().text = "";
+        foreach (char c in text.ToCharArray())
+        {
+            policyTextBox.GetComponent<TextMeshProUGUI>().text += c;
+            yield return new WaitForSeconds(.03f);
+        }
     }
 }
