@@ -98,6 +98,7 @@ public class GameController : MonoBehaviour
         dialogueViewer.InitializeDialogue();
 
         money = 0;
+        ChangeMoney(1000);
         progress = 0;
 
         // isPlaying = true;

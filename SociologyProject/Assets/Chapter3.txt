@@ -19,7 +19,7 @@ Next[[Policy]]
 :: Policy[Policy]
 Next[[ResourceOfficer]]
 
-:: ResourceOfficer
+:: ResourceOfficer[Character A]
 Mrs. Williams, do you have a moment?
 State legislature passed allowing us to station a school resource officer in all high schools.
 These officers have really helped with discipline in the past.
@@ -36,7 +36,7 @@ Next[[PoliticalDiscussions]]
 Yes ma’am, we will follow through with your plan. Take care.
 Next[[PoliticalDiscussions]]
 
-:: PoliticalDiscussions
+:: PoliticalDiscussions[Character C]
 Mrs. Williams, I wanted to stop you and ask your advice about something.
 It has come to my attention recently that there is a group of students protesting the theme of one of this years’ fun dress-up days before homecoming.
 The student government this year set the last day to be ‘Freedom Friday’ but there is a group of students saying that they don’t feel included.

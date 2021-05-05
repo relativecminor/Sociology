@@ -19,7 +19,7 @@ Next[[Policy]]
 :: Policy[Policy]
 Next[[UniformA]]
 
-:: UniformA
+:: UniformA[Character D]
 We’re going to need some decisions from you, Mr. Johnson.
 We received many complaints from parents about the clothes some of the girls at this school are wearing.
 It is not appropriate for a school setting, and I hope we see some stricter enforcement of the rules.
@@ -35,7 +35,7 @@ Next[[CulturalCompetency]]
 I’ll leave the execution in your hands!
 Next[[CulturalCompetency]]
 
-:: UniformB
+:: UniformB[Character D]
 Mr. Johnson! We can’t be cutting so much slack for students who come to school without a proper uniform.
 I know you work closely with the parents and students, so I need you to find a solution that upholds the pride of our school.
 Allow uniform purchases through voucher system[[Vouchers]]
@@ -49,7 +49,7 @@ Next[[CulturalCompetency]]
 See to it that it works
 Next[[CulturalCompetency]]
 
-:: CulturalCompetency
+:: CulturalCompetency[Character E]
 Hey Mr. Johnson, do you know if there’s any room for our school to request cultural competency training this year?
 I’ve been reading up on some studies recently, and I think it could really help our school.
 Request Cultural Competency Training from the state[[RequestTraining]]

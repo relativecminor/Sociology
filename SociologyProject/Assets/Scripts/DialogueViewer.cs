@@ -94,7 +94,7 @@ public class DialogueViewer : MonoBehaviour
             if (node.tags.Contains("Character"))
             {
                 OpenCharacters(node);
-                Debug.Log("A");
+                Debug.Log("Character Pop-Up!");
             }
             if (node.title == "Intro")
             {

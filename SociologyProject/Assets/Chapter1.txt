@@ -22,6 +22,9 @@ Next[[TeacherTraining]]
 :: TeacherTraining[Character H]
 As the school year draws to a close and the weather is getting warmer, it's time for School High to select the teacher training programs for the summer.
 As the Principal for Rock Creek Elementary School, people rely on you to make some tough decisions.
+If the state government has provided you with the necessary policies, your options will be more flexible.
+If an option is ever unavailable, there is a corresponding policy at the state level that was not purchased.
+...
 Excuse me, Principal Smith? The upcoming school year is approaching quickly, and we still haven't received your decisions about the faculty training this summer.
 Last year we had some discipline issues with the students. We were hoping to address some of those concerns with this training.
 Positive Behavior Supports[[PBS]]
@@ -37,7 +40,7 @@ Thank you for letting us know! We will move forward with your selection.
 ...
 Next[[GT]]
 
-:: GT
+:: GT[Character I]
 Principal Smith, a parent reached out to us this week with a concerning issue.
 Despite 17% of our students being black, only 10% of the students in our Gifted and Talented program are black.
 We haven't changed any requirements, the students who score above a certain number on our placement test are accepted into the program.
@@ -45,7 +48,7 @@ We're not sure why the disconnect exists and we're not sure if we should try and
 Lower requirement for GT program.[[LowerGTRequirement]]
 Change selection process for GT program.[[ChangeGTSelection]]
 
-:: Uniforms
+:: Uniforms[Character B]
 Our sister school recently made the decision to transition away from requiring uniforms.
 There's talk amongst the parents and faculty about whether our school will follow.
 What are your thoughts?

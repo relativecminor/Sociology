@@ -19,7 +19,7 @@ Next[[Policy]]
 :: Policy[Policy]
 Next[[CriticalConversation]]
 
-:: CriticalConversation
+:: CriticalConversation[Character F]
 Hi Parker, do you have a moment? When I was in High School we had a club called Students for Black Culture.
 It was a really great place for me to talk to other students of color, and I was really hoping to join something similar when I came here.
 I don’t feel like it’s something I can start myself. Is there anything you could do?
@@ -34,7 +34,7 @@ Next[[SportsFunding]]
 Oh, I see. Well thanks for trying.
 Next[[SportsFunding]]
 
-:: SportsFunding
+:: SportsFunding[Character G]
 Parker, do you have a moment?
 Administration says that a portion of the recent big donation is going to some of our sports teams.
 Do you have any thoughts on where that money should go?
