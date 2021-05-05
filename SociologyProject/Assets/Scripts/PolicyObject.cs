@@ -11,6 +11,7 @@ public class PolicyObject
         public int cost;
         public List<string> requires;
         public List<(string Name, int Value)> actions;
+        public string feedback;
     }
 
     public List<Policy> ParsePolicies(TextAsset textAsset, string delimeter)
@@ -44,6 +45,14 @@ public class PolicyObject
             {
                 policy.requires.Add(requirement);
             }
+
+            // Feedback
+            string feedback = "";
+            if (policyDetails.Length > 5)
+            {
+                policy.feedback = policyDetails[5];
+            }
+            policy.feedback = feedback;
 
             policies.Add(policy);
         }
