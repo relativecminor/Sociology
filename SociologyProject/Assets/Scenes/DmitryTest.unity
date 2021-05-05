@@ -2307,7 +2307,6 @@ MonoBehaviour:
   policyCanvas: {fileID: 265593636}
   dialogueCanvas: {fileID: 1205128503}
   moneyTextBox: {fileID: 2141748288}
-  money: 10000
   policyTextBox: {fileID: 1775441139}
   policyButtons:
   - {fileID: 1628082544}
@@ -2319,6 +2318,7 @@ MonoBehaviour:
   - {fileID: 1064943797}
   - {fileID: 1349451101}
   - {fileID: 1627277184}
+  policyPurchased: 000000000000000000000000000000000000
 --- !u!4 &564080771
 Transform:
   m_ObjectHideFlags: 0
@@ -3730,6 +3730,18 @@ MonoBehaviour:
       - m_Target: {fileID: 611979423}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 265593638}
+        m_TargetAssemblyTypeName: PolicyController, Assembly-CSharp
+        m_MethodName: ClosePolicy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

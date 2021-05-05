@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     //public DialogueController dialogueController; // Needed to start dialogue
     public GameObject mainMenu;
     public GameObject endScreen;
+   // public GameObject policyScreen;
 
     //public int curChapterIndex;
     //public GameObject[] chapters;
@@ -133,6 +134,7 @@ public class GameController : MonoBehaviour
         pauseMenu.SetActive(false);
         endScreen.SetActive(false);
         mainMenu.SetActive(true);
+        //policyScreen.SetActive(false);
     }
 
     public void EndGame()
