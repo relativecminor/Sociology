@@ -140,6 +140,8 @@ public class GameController : MonoBehaviour
     public void EndGame()
     {
         endScreen.SetActive(true);
+        mainMenu.SetActive(false);
+        
     }
 
     public void ChangeMoney(int amount)
