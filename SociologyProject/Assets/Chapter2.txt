@@ -57,13 +57,25 @@ Stick with the originally planned schedule[[OriginalTraining]]
 
 :: RequestTraining
 Great! I’ll put in the request now.
-Next[[CutScene]]
+Next[[CutSceneNeutral]]
 
 :: OriginalTraining
 Oh, really. I guess there’s just no room, huh?
-Next[[CutScene]]
+Next[[CutSceneNeutral]]
 
-:: CutScene[END CutScene Chapter3]
-This is the cutscene
-for chapter 2
+:: CutSceneNeutral[END CutScene Chapter3]
+jamie took chelsea and i to the movies today
+better than homework lol.
+
+:: CutScenePoor[END CutScene Chapter3]
+i got in trouble today for what i was wearing.
+it wasnt like i didnt want to follow the rules
+i didnt even know i was doing anything wrong
+i dont want to go to school tomorrow.
+
+:: CutSceneGood[END CutScene Chapter3]
+chelsea almost got in a lot of trouble today
+but she said that after class mr borrow talked to her
+and apparently he felt that he shouldnt have gotten her in trouble when he did.
+ive never seen a teacher do that before.
 

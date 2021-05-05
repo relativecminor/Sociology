@@ -68,14 +68,35 @@ Next[[Uniforms]]
 :: DoAwayUniforms
 Understood. I will write a short blurb in the newsletter addressing this.
 ...
-Next[[CutScene]]
+Next[[CutSceneNeutral]]
 
 :: ContinueUniforms
 Understood. I will write a short blurb in the newsletter addressing this.
 ...
-Next[[CutScene]]
+Next[[CutSceneNeutral]]
 
-:: CutScene[END CutScene Chapter2]
-Hey you guys
-Thought I would give you an update
+:: CutSceneNeutral[END CutScene Chapter2]
+hey Inter-Gram! its maya.
+Jamie let me make an account on his phone
+but nobody tell my mom!
+anyway this is my stuffed dog lucy.
+she wanted to say hi #lucy #firstpost
+i was really excited about this year
+but i guess i just dont like history.
+science was a lot of fun though
+we even got to hatch butterflies.
+#gross #butalsocool
+
+:: CutScenePoor[END CutScene Chapter2]
+im so mad. mrs yellnitz suspended me today
+even though i didnt do anything wrong.
+and besides rachael was also talking
+and she didnt even get in trouble
+its not fair.
+
+:: CutSceneGood[END CutScene Chapter2]
+chelsea and i got into the gifted and talented class!
+i saw all the cool projects the class before us did
+i want to do the one with the paintings of coins.
+
 

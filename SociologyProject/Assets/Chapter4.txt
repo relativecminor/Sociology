@@ -43,13 +43,28 @@ Maybe we should fund multiple smaller teams.[[SmallerTeams]]
 
 :: FootballTeam
 Thanks for your support! I値l pass your word on.
-Next[[CutScene]]
+Next[[CutSceneNeutral]]
 
 :: SmallerTeams
 Sounds good! I値l pass your word on, and see what happens.
-Next[[CutScene]]
+Next[[CutSceneNeutral]]
 
-:: CutScene[END CutScene]
-This is the cutscene
-for chapter 4
+:: CutSceneNeutral[END CutScene]
+Thinking about post-college decisions.
+Not sure what to do or where to go,
+but I知 glad I am where I am.
+#dreambig #myheartwillgoon
+
+:: CutScenePoor[END CutScene]
+So that people stop asking, yeah I dropped college.
+It came down to a money thing
+and I didn稚 feel like I belonged there anyway.
+So stop dming me about it.
+
+:: CutSceneGood[END CutScene]
+Excited to announce here that I was accepted
+into an internship at NASA for the next year!
+I知 starting in June!!
+#tothemoon #toinfinity #andbeyond
+
 
