@@ -288,18 +288,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1288752450}
-        m_TargetAssemblyTypeName: DialogueViewer, Assembly-CSharp
-        m_MethodName: Next
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 375015369}
         m_TargetAssemblyTypeName: DialogueBoxController, Assembly-CSharp
         m_MethodName: Next
@@ -1675,6 +1663,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 321484281}
   textBox: {fileID: 867748749}
   policyButton: {fileID: 436676297}
+  dialogueViewer: {fileID: 1288752450}
 --- !u!82 &375015370
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2496,7 +2485,7 @@ MonoBehaviour:
   dialogueViewer: {fileID: 1288752450}
   pauseMenu: {fileID: 2048177232}
   gamePaused: 0
-  macLineEndings: 0
+  macLineEndings: 1
   policies: {fileID: 4900000, guid: c531362879a15405eb7eeb633e672f4e, type: 3}
 --- !u!1 &612034707
 GameObject:
@@ -8156,7 +8145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9125839330140ed8297fd98594b7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  macLineEndings: 0
+  macLineEndings: 1
 --- !u!4 &1288752449
 Transform:
   m_ObjectHideFlags: 0
@@ -11643,7 +11632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2028032550
 MonoBehaviour:
   m_ObjectHideFlags: 0

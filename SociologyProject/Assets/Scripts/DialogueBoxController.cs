@@ -14,8 +14,11 @@ public class DialogueBoxController : MonoBehaviour
     public GameObject textBox;
     public GameObject policyButton;
     private AudioSource nextSound;
+    public DialogueViewer dialogueViewer;
 
     private Coroutine dialogueCo;
+    private bool typingComplete = true;
+    private string fullMessage;
 
     /*void Awake()
     {
@@ -31,13 +34,13 @@ public class DialogueBoxController : MonoBehaviour
 
     private void Update()
     {
-        
-    }    
+
+    }
 
     public void OpenBox()
     {
         dialogueAnimator.SetBool("isOpen", true);
-        
+
     }
 
     public void CloseBox()
@@ -47,6 +50,7 @@ public class DialogueBoxController : MonoBehaviour
 
     public void StartDialogue(string text)
     {
+        fullMessage = text;
         OpenBox();
         if (dialogueCo != null)
         {
@@ -58,26 +62,40 @@ public class DialogueBoxController : MonoBehaviour
     public void HideDialogue()
     {
         StopCoroutine(dialogueCo);
+        typingComplete = true;
+
         CloseBox();
     }
 
     public void Next()
     {
+        if (typingComplete)
+        {
+            dialogueViewer.Next();
+        }
+        else
+        {
+            StopCoroutine(dialogueCo);
+            textBox.GetComponent<TextMeshProUGUI>().text = fullMessage;
+            typingComplete = true;
+        }
         nextSound.Play();
     }
 
     IEnumerator typeText(string text)
     {
+        typingComplete = false;
         textBox.GetComponent<TextMeshProUGUI>().text = "";
         foreach (char c in text.ToCharArray())
         {
             textBox.GetComponent<TextMeshProUGUI>().text += c;
             // https://answers.unity.com/questions/904429/pause-and-resume-coroutine-1.html
-            while (GameController.Instance.gamePaused) {
+            while (GameController.Instance.gamePaused)
+            {
                 yield return null;
             }
             yield return new WaitForSeconds(.03f);
         }
-
+        typingComplete = true;
     }
 }
