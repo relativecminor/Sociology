@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
     public GameObject moneyTextBox;
     public int money;
-    private int progress;
+    public int progress;
     private int openPolicy;
     //public DialogueController dialogueController; // Needed to start dialogue
     public GameObject mainMenu;

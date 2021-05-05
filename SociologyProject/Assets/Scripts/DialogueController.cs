@@ -54,4 +54,9 @@ public class DialogueController : MonoBehaviour
         newResponse.destinationNode = "UniformB";
         curDialogue.GetNode("Policy").responses[0] = newResponse;
     }
+
+    public Dialogue GetCurrentDialogue()
+    {
+        return curDialogue;
+    }
 }

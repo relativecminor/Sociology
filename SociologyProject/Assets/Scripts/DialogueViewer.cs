@@ -81,7 +81,33 @@ public class DialogueViewer : MonoBehaviour
 
     public void OnNodeEntered(Node node)
     {                
+        if (node.tags.Contains("PreCutScene"))
+        {
 
+            //dialogueController.GetCurrentDialogue().GetNode()
+            if (GameController.Instance.progress <3)
+            {
+                Response newResponse = new Response();
+                newResponse.displayText = "Next";
+                newResponse.destinationNode = "CutScenePoor";
+                node.responses[0] = newResponse;
+                // curChapterIndex
+            }
+            else if (GameController.Instance.progress < 6)
+            {
+                Response newResponse = new Response();
+                newResponse.displayText = "Next";
+                newResponse.destinationNode = "CutSceneNeutral";
+                node.responses[0] = newResponse;
+            }
+            else
+            {
+                Response newResponse = new Response();
+                newResponse.displayText = "Next";
+                newResponse.destinationNode = "CutSceneGood";
+                node.responses[0] = newResponse;
+            }
+        }
         if (node.tags.Contains("Policy"))
         {
             dialogueBoxController.HideDialogue();
