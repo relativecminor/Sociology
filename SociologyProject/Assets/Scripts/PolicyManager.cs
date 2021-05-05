@@ -13,6 +13,7 @@ public class PolicyManager : MonoBehaviour
     public Animator policyAnimator;
     public Canvas policyCanvas;
     public Canvas dialogueCanvas;
+    private AudioSource clickSound;
 
     public GameObject moneyTextBox;
     //public int money;
@@ -26,7 +27,7 @@ public class PolicyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        clickSound = gameObject.GetComponent<AudioSource>();
     }
     private void Awake()
     {
@@ -105,6 +106,9 @@ public class PolicyManager : MonoBehaviour
         0,
         0,
         0};
+
+    private int[] policyBenefit = new int[] { 5, 4, 2, 2, 2, 2, 3, 2, 1};
+
     public bool[] policyPurchased = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
 
     public string getPolicyTitle(int policyNumber) { return policyTitle[policyNumber]; }
@@ -136,6 +140,7 @@ public class PolicyManager : MonoBehaviour
         if (GameController.Instance.money >= policyCost[openPolicy] && !policyPurchased[openPolicy])
         {
             GameController.Instance.ChangeMoney(policyCost[openPolicy] * -1);
+            GameController.Instance.ChangeProgress(policyBenefit[openPolicy]);
             policyPurchased[openPolicy] = true;
             policyButtons[openPolicy].GetComponent<Image>().color = Color.white;
             Debug.Log("Purchased Policy " + openPolicy);
@@ -179,5 +184,10 @@ public class PolicyManager : MonoBehaviour
     {
         Debug.Log(title);
         return policyPurchased[Array.IndexOf(policyTitle, title)];
+    }
+
+    public void PlayClickSound()
+    {
+        clickSound.Play();
     }
 }

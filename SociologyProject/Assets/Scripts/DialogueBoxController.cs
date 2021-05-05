@@ -79,7 +79,7 @@ public class DialogueBoxController : MonoBehaviour
             textBox.GetComponent<TextMeshProUGUI>().text = fullMessage;
             typingComplete = true;
         }
-        nextSound.Play();
+        PlayNextSound();
     }
 
     IEnumerator typeText(string text)
@@ -97,5 +97,10 @@ public class DialogueBoxController : MonoBehaviour
             yield return new WaitForSeconds(.03f);
         }
         typingComplete = true;
+    }
+
+    public void PlayNextSound()
+    {
+        nextSound.Play();
     }
 }

@@ -135,6 +135,9 @@ public class GameController : MonoBehaviour
         endScreen.SetActive(false);
         mainMenu.SetActive(true);
         //policyScreen.SetActive(false);
+        progress = 0;
+        money = 1000;
+        ChangeMoney(0);
     }
 
     public void EndGame()
